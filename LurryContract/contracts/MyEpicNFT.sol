@@ -43,6 +43,16 @@ contract MyEpicNFT is ERC721URIStorage {
             )
         )
     );
+            string memory json3 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Crayon Lurry", "description": "Somebody let him get into the box of crayons again!", "image": "ipfs://QmVvLG9HD3jGsAXqG9Poyzay8mYptDnrwGBU6oYDZzFDXX?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
 
   string memory json = "";
 
