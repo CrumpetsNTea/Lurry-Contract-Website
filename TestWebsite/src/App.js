@@ -59,7 +59,7 @@ const App = () => {
   }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const CONTRACT_ADDRESS = "0x1ae40b64a35e2eb243e169906bb127BcEC727687";
  
     try {
       const { ethereum } = window;
@@ -75,7 +75,7 @@ const App = () => {
         console.log("Mining...please wait.")
         await nftTxn.wait();
 
-        console.log(`Mined, see transaction: https://rinkeby.etherescan.io/tx/${nftTxn.hash}`);
+        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
       } else {
         console.log("Ethereum object doesn't exist!")
       }
@@ -102,9 +102,9 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">My NFT Collection</p>
+          <p className="header gradient-text">Secret Lurry Society</p>
           <p className="sub-text">
-            Each unique. Each beautiful. Discover your NFT today.
+            Mint a Lurry NFT. Gain access to the most exclusive programming community on the Ethereum Blockchain.
           </p>
           {currentAccount === "" ? (
             renderNotConnectedContainer()
@@ -115,13 +115,7 @@ const App = () => {
           )}
         </div>
         <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+
         </div>
       </div>
     </div>

@@ -60,6 +60,8 @@ contract MyEpicNFT is ERC721URIStorage {
       json = json1;
     } else if (newItemId == 1) {
       json = json2;
+    } else if (newItemId == 2) {
+      json = json3;
     }
     // Just like before, we prepend data:application/json;base64, to our data.
     string memory finalTokenUri = string(
