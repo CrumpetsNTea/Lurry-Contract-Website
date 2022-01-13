@@ -1,16 +1,16 @@
 const main = async () => {
-  const nftContractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
+  const nftContractFactory = await hre.ethers.getContractFactory('SecretLurrySociety');
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
   console.log("Contract deployed to:", nftContract.address);
 
   // Call the mint function
-  let txn = await nftContract.makeAnEpicNFT();
+  let txn = await nftContract.mintALurry();
   // Wait for NFT to be mined
   await txn.wait();
   
   // Mint another one for fun
-  txn = await nftContract.makeAnEpicNFT();
+  txn = await nftContract.mintALurry();
 
   // Wait for it to be mined
   await txn.wait();

@@ -12,7 +12,7 @@ import "hardhat/console.sol";
 // We need to import the helper functions from the contract that we copy/pasted.
 import { Base64 } from "./libraries/Base64.sol";
 
-contract MyEpicNFT is ERC721URIStorage {
+contract SecretLurrySociety is ERC721URIStorage {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
@@ -20,7 +20,7 @@ contract MyEpicNFT is ERC721URIStorage {
     console.log("This is my NFT contract. Woah!");
   }
 
-  function makeAnEpicNFT() public {
+  function mintALurry() public {
     uint256 newItemId = _tokenIds.current();
     // Get all the JSON metadata in place and base64 encode it.
     string memory json1 = Base64.encode(

@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import { ethers } from "ethers";
-import myEpicNft from './utils/MyEpicNFT.json'
+import SecretLurrySociety from './utils/SecretLurrySociety.json'
 
-const TWITTER_HANDLE = '_buildspace';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
@@ -59,7 +57,7 @@ const App = () => {
   }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0x1ae40b64a35e2eb243e169906bb127BcEC727687";
+    const CONTRACT_ADDRESS = "0xf48DaC9dC43C734fEB3485649C359BE570dBFB7B";
  
     try {
       const { ethereum } = window;
@@ -67,10 +65,10 @@ const App = () => {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myEpicNft.abi, signer);
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, SecretLurrySociety.abi, signer);
         
         console.log("Going to pop wallet now to pay gas...")
-        let nftTxn = await connectedContract.makeAnEpicNFT();
+        let nftTxn = await connectedContract.mintALurry();
 
         console.log("Mining...please wait.")
         await nftTxn.wait();
