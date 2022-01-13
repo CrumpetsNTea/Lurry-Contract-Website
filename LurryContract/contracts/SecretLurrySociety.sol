@@ -53,7 +53,16 @@ contract SecretLurrySociety is ERC721URIStorage {
             )
         )
     );
-
+            string memory json4 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Frozen Lurry", "description": "Do you want to build a Luuuurrrryyyy?", "image": "ipfs://QmNrhVEkGwoBsJ8tzcgkt7TESa5K4EatKDu5V47Bwj1K3g?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
   string memory json = "";
 
         if (newItemId == 0) {
@@ -62,8 +71,10 @@ contract SecretLurrySociety is ERC721URIStorage {
       json = json2;
     } else if (newItemId == 2) {
       json = json3;
+    } else if (newItemId == 3) {
+      json = json4;
     }
-    // Just like before, we prepend data:application/json;base64, to our data.
+    // Prepend data:application/json;base64, to our data.
     string memory finalTokenUri = string(
         abi.encodePacked("data:application/json;base64,", json)
     );
@@ -72,6 +83,7 @@ contract SecretLurrySociety is ERC721URIStorage {
     console.log(finalTokenUri);
     console.log("--------------------\n");
 
+    // Mint the NFT and send it to the person requesting the mint
     _safeMint(msg.sender, newItemId);
     
     // Update your URI!!!
