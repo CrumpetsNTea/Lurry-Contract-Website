@@ -1,6 +1,11 @@
 @font-face {
-  src: url(../fonts/Raleway-Black.ttf);
+  src: url(../fonts/Raleway/Raleway-Black.ttf);
   font-family: Raleway;
+}
+
+@font-face {
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+  font-family: Raleway-regular;
 }
 
 .roadmap {
@@ -33,4 +38,20 @@
   background-color: black;
   border-radius: 10px;
   padding: 2rem;
+}
+
+.roadmap-description-steps {
+  font-family: "Raleway-regular", sans-serif;
+  color: rgb(44, 44, 44);
+}
+
+.bold {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+.description-steps {
+  display: flex;
+  align-items: center;
 }
