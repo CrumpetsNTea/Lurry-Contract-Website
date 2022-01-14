@@ -14,17 +14,19 @@
   align-items: center;
   justify-content: space-around;
   background-color: #efe19d;
-  height: 50rem;
+  height: 75rem;
 }
 
 .roadmap-description {
   display: flex;
   flex-direction: column;
   text-align: start;
+  justify-content: center;
   width: 90%;
   background-color: #fdfdfe;
-  border-radius: 10px;
+  border-radius: 40px;
   padding: 2rem;
+  height: 20rem;
 }
 
 .roadmap-description-header {
@@ -34,10 +36,13 @@
 }
 
 .lurry-container {
+  display: flex;
+  justify-content: space-around;
   width: 90%;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 40px;
   padding: 2rem;
+  height: 40rem;
 }
 
 .roadmap-description-steps {
@@ -54,4 +59,14 @@
 .description-steps {
   display: flex;
   align-items: center;
+}
+
+.lurry-png {
+  object-fit: contain;
+  overflow: hidden;
+  width: 20%;
+}
+
+.roadmap-description-info {
+  margin-left: 10rem;
 }
