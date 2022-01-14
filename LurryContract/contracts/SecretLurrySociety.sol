@@ -63,6 +63,36 @@ contract SecretLurrySociety is ERC721URIStorage {
             )
         )
     );
+                string memory json5 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Sunburn Lurry", "description": "This is what happens when you forget the sunscreen Lurry...", "image": "ipfs://Qmb5meDe2CKif5SJBbzdx65B7WDczcvYVR8axxquaJmhnZ?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
+                   string memory json6 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Gentleman Lurry", "description": "He is a distinguished gentleman, and a scholar.", "image": "ipfs://Qmd4L3R7CHkSvyzLmCDatvtmWdP2hbV8fvAGm1DWDTmRrj?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
+                       string memory json7 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "OG Lurry", "description": "Will the real Lurry please stand up.", "image": "ipfs://QmbQZo8U6z9oqYu74gVeSCHfZDpZKTbvUV8qWpY3wDLmAi?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
   string memory json = "";
 
         if (newItemId == 0) {
@@ -73,6 +103,12 @@ contract SecretLurrySociety is ERC721URIStorage {
       json = json3;
     } else if (newItemId == 3) {
       json = json4;
+    } else if (newItemId == 4) {
+      json = json5;
+    } else if (newItemId == 5) {
+      json = json6;
+    } else if (newItemId == 6) {
+      json = json7;
     }
     // Prepend data:application/json;base64, to our data.
     string memory finalTokenUri = string(
