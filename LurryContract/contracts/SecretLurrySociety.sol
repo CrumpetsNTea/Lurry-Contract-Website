@@ -93,6 +93,16 @@ contract SecretLurrySociety is ERC721URIStorage {
             )
         )
     );
+                           string memory json8 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Diguised Lurry", "description": "Shhhh... he is in disguise! Try not to blow his cover.", "image": "ipfs://QmQ8ncA291sxUXXF4SnEbASwd8U4QPDAdCTXJXwYx6ZKQw?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
   string memory json = "";
 
         if (newItemId == 0) {
@@ -109,6 +119,8 @@ contract SecretLurrySociety is ERC721URIStorage {
       json = json6;
     } else if (newItemId == 6) {
       json = json7;
+    } else if (newItemId == 7) {
+      json = json8;
     }
     // Prepend data:application/json;base64, to our data.
     string memory finalTokenUri = string(
