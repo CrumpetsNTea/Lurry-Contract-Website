@@ -103,6 +103,46 @@ contract SecretLurrySociety is ERC721URIStorage {
             )
         )
     );
+                               string memory json9 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Sailor Lurry", "description": "You know what they say, Pink Lurry at night, sailors delight", "image": "ipfs://QmToXznD69GLmM9hwZJRwPYKSFDGNKRRcmMbAzfzZw6ksm?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
+                                   string memory json10 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Strawburry Lurry", "description": "He is berry sweet!", "image": "ipfs://QmXfPxesXFmDcv6JePfRyNHCpJtJx1CykWxVvs6k4Demx4?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
+                                    string memory json11 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Underwater Lurry", "description": "Lurry loves diving for treasure!", "image": "ipfs://QmPsyZeSk5tDHmTHJGjBK6tnummcYNW4r1LRc4N6or1CaM?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
+                                     string memory json12 = Base64.encode(
+        bytes(
+            string(
+                abi.encodePacked(
+                    '{"name": "Watermelon Lurry", "description": "Tastes like watermelon, on a summer evening", "image": "ipfs://Qmc5aFgiqw2NAXZVDYzDWQsK8fsyTEAhfDDyaBsc8iAJHf?preview=1"'
+                    '}'
+                )
+            )
+        )
+    );
   string memory json = "";
 
         if (newItemId == 0) {
@@ -121,6 +161,14 @@ contract SecretLurrySociety is ERC721URIStorage {
       json = json7;
     } else if (newItemId == 7) {
       json = json8;
+    } else if (newItemId == 8) {
+      json = json9;
+    } else if (newItemId == 9) {
+      json = json10;
+    } else if (newItemId == 10) {
+      json = json11;
+    } else if (newItemId == 11) {
+      json = json12;
     }
     // Prepend data:application/json;base64, to our data.
     string memory finalTokenUri = string(
