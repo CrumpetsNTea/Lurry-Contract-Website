@@ -1,3 +1,8 @@
+@font-face {
+  src: url(../fonts/Raleway-Black.ttf);
+  font-family: Raleway;
+}
+
 .roadmap {
   display: flex;
   flex-direction: column;
@@ -15,6 +20,12 @@
   background-color: #fdfdfe;
   border-radius: 10px;
   padding: 2rem;
+}
+
+.roadmap-description-header {
+  font-family: "Raleway", sans-serif;
+  color: rgb(44, 44, 44);
+  font-size: 3rem;
 }
 
 .lurry-container {
