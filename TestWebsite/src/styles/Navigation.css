@@ -20,3 +20,8 @@
   margin: 15px;
   color: white;
 }
+
+.logo {
+  max-width: 120%;
+  max-height: 120%;
+}
