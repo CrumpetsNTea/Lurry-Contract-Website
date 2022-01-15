@@ -37,6 +37,7 @@
 
 .lurry-container {
   display: flex;
+  overflow: hidden;
   justify-content: space-around;
   width: 90%;
   background-color: black;
@@ -69,4 +70,87 @@
 
 .roadmap-description-info {
   margin-left: 10rem;
+}
+
+.carousel-arrow {
+  cursor: pointer;
+  background: black;
+  border: none;
+  color: white;
+}
+
+.slide-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -2100px;
+  -webkit-animation: slide 0.2s forwards;
+  animation: slide 0.2s forwards;
+}
+
+.slide-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 2100px;
+  -webkit-animation: slide 0.2s forwards;
+  animation: slide 0.2s forwards;
+}
+
+.slide-right-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  -webkit-animation: slide-right-out 0.2s forwards;
+  animation: slide-right-out 0.2s forwards;
+}
+
+.slide-left-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  -webkit-animation: slide-left-out 0.2s forwards;
+  animation: slide-left-out 0.2s forwards;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slide-right-out {
+  100% {
+    left: 2100px;
+  }
+}
+
+@keyframes slide-right-out {
+  100% {
+    left: 2100px;
+  }
+}
+
+@-webkit-keyframes slide-left-out {
+  100% {
+    left: -2100px;
+  }
+}
+
+@keyframes slide-left-out {
+  100% {
+    left: -2100px;
+  }
 }
