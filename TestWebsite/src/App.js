@@ -1,10 +1,12 @@
 import './styles/App.css';
 import MintPage from './Mint';
 import Roadmap from './components/Roadmap';
+import Navigation from './components/Navigation';
 
 const App = () => {
 return (
   <>
+  <Navigation />
   <MintPage />
   <Roadmap />
   </>
