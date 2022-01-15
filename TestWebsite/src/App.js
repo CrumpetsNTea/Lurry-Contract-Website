@@ -1,5 +1,5 @@
 import './styles/App.css';
-import MintPage from './Mint';
+import MintPage from './components/Mint';
 import Roadmap from './components/Roadmap';
 
 const App = () => {

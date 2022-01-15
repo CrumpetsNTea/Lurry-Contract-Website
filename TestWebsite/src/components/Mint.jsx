@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import SecretLurrySociety from './utils/SecretLurrySociety.json'
+import SecretLurrySociety from '../utils/SecretLurrySociety.json'
 import './styles/Mint.css'
 
 const MintPage = () => {
