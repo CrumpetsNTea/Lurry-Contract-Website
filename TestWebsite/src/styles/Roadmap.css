@@ -37,7 +37,6 @@
 
 .lurry-container {
   display: flex;
-  overflow: hidden;
   justify-content: space-around;
   width: 90%;
   background-color: black;
@@ -64,7 +63,6 @@
 
 .lurry-png {
   object-fit: contain;
-  overflow: hidden;
   width: 20%;
 }
 
@@ -76,7 +74,7 @@
   cursor: pointer;
   background: black;
   border: none;
-  color: white;
+  object-fit: contain;
 }
 
 .slide-right {
@@ -117,6 +115,17 @@
   left: 0;
   -webkit-animation: slide-left-out 0.2s forwards;
   animation: slide-left-out 0.2s forwards;
+}
+
+.contain-slide {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mirrored {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 @-webkit-keyframes slide {

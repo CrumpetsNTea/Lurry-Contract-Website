@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "../styles/Roadmap.css";
 
 export default function Roadmap() {
-  const [slide, setSlide] = useState(0);
+  const [slide, setSlide] = useState(1);
   const [transition, setTransition] = useState("slide-left");
 
   const increaseSlide = () => {
     if (slide < 2) {
-      setTransition("slide-right-out");
+      setTransition("slide-left-out");
       setTimeout(() => {
-        setTransition("slide-right");
+        setTransition("slide-left");
         setSlide(slide + 1);
       }, 50);
     }
@@ -17,9 +17,9 @@ export default function Roadmap() {
 
   const decreaseSlide = () => {
     if (slide > 0) {
-      setTransition("slide-left-out");
+      setTransition("slide-right-out");
       setTimeout(() => {
-        setTransition("slide-left");
+        setTransition("slide-right");
         setSlide(slide - 1);
       }, 50);
     }
@@ -29,74 +29,89 @@ export default function Roadmap() {
     <section className="roadmap">
       {slide === 0 && (
         <ul className="lurry-container">
-          <button onClick={decreaseSlide} className="carousel-arrow">
-            Click me
-          </button>
-          <div className={transition}>
-            <img
-              className="lurry-png"
-              src="../../images/3DMovieLurry.png"
-            ></img>
-            <img
-              className="lurry-png"
-              src="../../images/BiohazardLurry.png"
-            ></img>
-            <img className="lurry-png" src="../../images/CrayonLurry.png"></img>
-            <img
-              className="lurry-png"
-              src="../../images/ForgotTheSunscreenLurry.png"
-            ></img>
+          <div className="contain-slide">
+            <div className={transition}>
+              <img
+                className="lurry-png"
+                src="../../images/3DMovieLurry.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/BiohazardLurry.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/CrayonLurry.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/ForgotTheSunscreenLurry.png"
+              ></img>
+            </div>
           </div>
           <button onClick={increaseSlide} className="carousel-arrow">
-            Click me
+            <img src="../../images/Icon-arrow-right-white.png"></img>
           </button>
         </ul>
       )}
       {slide === 1 && (
         <ul className="lurry-container">
           <button onClick={decreaseSlide} className="carousel-arrow">
-            Click me
+            <img
+              className="mirrored"
+              src="../../images/Icon-arrow-right-white.png"
+            ></img>
           </button>
-          <div className={transition}>
-            <img
-              className="lurry-png"
-              src="../../images/GentlemanLurry.png"
-            ></img>
-            <img className="lurry-png" src="../../images/Lurry.png"></img>
-            <img
-              className="lurry-png"
-              src="../../images/LurryinDisguise.png"
-            ></img>
-            <img className="lurry-png" src="../../images/SailorLurry.png"></img>
+          <div className="contain-slide">
+            <div className={transition}>
+              <img
+                className="lurry-png"
+                src="../../images/GentlemanLurry.png"
+              ></img>
+              <img className="lurry-png" src="../../images/Lurry.png"></img>
+              <img
+                className="lurry-png"
+                src="../../images/LurryinDisguise.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/SailorLurry.png"
+              ></img>
+            </div>
           </div>
           <button onClick={increaseSlide} className="carousel-arrow">
-            Click me
+            <img src="../../images/Icon-arrow-right-white.png"></img>
           </button>
         </ul>
       )}
       {slide === 2 && (
         <ul className="lurry-container">
           <button onClick={decreaseSlide} className="carousel-arrow">
-            Click me
+            <img
+              className="mirrored"
+              src="../../images/Icon-arrow-right-white.png"
+            ></img>
           </button>
-          <div className={transition}>
-            <img
-              className="lurry-png"
-              src="../../images/StrawburryLurry.png"
-            ></img>
-            <img
-              className="lurry-png"
-              src="../../images/BiohazardLurry.png"
-            ></img>
-            <img className="lurry-png" src="../../images/CrayonLurry.png"></img>
-            <img
-              className="lurry-png"
-              src="../../images/ForgotTheSunscreenLurry.png"
-            ></img>
+          <div className="contain-slide">
+            <div className={transition}>
+              <img
+                className="lurry-png"
+                src="../../images/StrawburryLurry.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/BiohazardLurry.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/CrayonLurry.png"
+              ></img>
+              <img
+                className="lurry-png"
+                src="../../images/ForgotTheSunscreenLurry.png"
+              ></img>
+            </div>
           </div>
-          <button onClick={increaseSlide} className="carousel-arrow">
-            Click me
-          </button>
         </ul>
       )}
       <div className="roadmap-description">
