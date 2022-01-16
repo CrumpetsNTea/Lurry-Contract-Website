@@ -9,3 +9,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #efe19d;
+  height: 75rem;
+  height: 922px;
+}
+
+.faqs-container {
+  color: #efe19d;
+}
