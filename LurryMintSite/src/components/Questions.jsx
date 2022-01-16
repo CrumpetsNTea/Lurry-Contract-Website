@@ -1,4 +1,4 @@
-import React from React;
+import React from react;
 import QuestionList from './QuestionList';
 import TeamList from './TeamList';
 import Footer from './Footer';

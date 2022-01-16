@@ -15,8 +15,8 @@
 }
 
 .card-image {
-  max-height: 20%;
-  max-width: 20%;
+  max-height: 50%;
+  max-width: 50%;
 }
 
 .card-title, .card-description {
