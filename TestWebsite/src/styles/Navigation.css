@@ -1,4 +1,6 @@
 /* navbar css */
+
+/* import poppins from google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
@@ -79,11 +81,6 @@ button:hover {
   background-color: #ffe77b;
 }
 
-
-@media screen and (max-width: 710px){
-
-  
-}
 
 
 
