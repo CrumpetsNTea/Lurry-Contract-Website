@@ -1,6 +1,7 @@
 // Contains FAQ section components
 
 import React, {useState} from 'react';
+import '../styles/QuestionList.css';
 
 
 function QuestionList() {
@@ -24,16 +25,20 @@ function QuestionList() {
   ]);
 
 return (
+  <>
+
   <div className="faq-section">
     <h1>FAQ Section </h1>
     <div className="faqs-container">
       {faqs.map((faq, index) => (
         <div>
-       {faqs.question}<br/>
+       {faq.question}<br/>
        </div>
       ))}
     </div>
   </div>
+  <img src="/images/overlayv4.png" alt="chalkboard overlay" className="overlay"/>
+  </>
 )
 }
 

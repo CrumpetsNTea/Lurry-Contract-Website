@@ -15,11 +15,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #efe19d;
+  background-color: #1F4451;
   height: 75rem;
   height: 922px;
+  color: white;
+  
 }
 
 .faqs-container {
-  color: #efe19d;
+  color: white;
+}
+
+.overlay {
+  width: 100%;
 }
