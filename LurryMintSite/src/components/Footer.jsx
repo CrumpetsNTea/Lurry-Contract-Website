@@ -1,7 +1,8 @@
 import React from 'react';
+import '../styles/Footer.css';
 
 function Footer () {
-  <footer>
+  <footer className="footer">
     Secret Lurry Society 
   </footer>
 

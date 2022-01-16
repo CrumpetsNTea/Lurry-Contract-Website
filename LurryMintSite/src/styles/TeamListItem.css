@@ -1,0 +1,27 @@
+/* Styles for TeamListItem components */
+/* import poppins from google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-image {
+  max-height: 20%;
+  max-width: 20%;
+}
+
+.card-title, .card-description {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+

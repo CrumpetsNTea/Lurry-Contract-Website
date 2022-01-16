@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import '../styles/QuestionList.css';
 import FAQ from './FAQ';
+import overlayv4 from '../images/overlayv4.png';
 
 
 function QuestionList() {
@@ -31,7 +32,8 @@ function QuestionList() {
   ]);
 
 return (
-  <div className="faq-section">
+  <div className="faq-container">
+
     <h1>FAQ Section </h1>
     <div className="faqs">
       {faqs.map((faq, i) => (
