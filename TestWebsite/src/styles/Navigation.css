@@ -10,7 +10,7 @@
 
 li, a {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 16px;
   color: #edf0f1;
   text-decoration: none;
@@ -31,14 +31,12 @@ button {
   align-items: center;
   background: #1D414D;
   padding: 0 45px 0 45px;
-  border: solid red;
 }
 
 
 .navbar > .logo {
   margin: 1rem;
   color: white;
-  border: solid red;
 }
 
 .logo {
@@ -68,9 +66,11 @@ button {
   padding: 9px 25px;
   background-color: #F4D12D;
   border: none;
-  border-radius: 50px;
+  border-radius: 2rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  box-shadow: 0 3px 2px;
+  font-weight: bold;
 }
 
 button:hover {
