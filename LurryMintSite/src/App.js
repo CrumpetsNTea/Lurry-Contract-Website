@@ -8,9 +8,9 @@ const App = () => {
 return (
   <>
   <Navigation />
-  <QuestionList />
   <MintPage />
   <Roadmap />
+  <QuestionList/>
   </>
 )
 };

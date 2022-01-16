@@ -7,7 +7,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .faq-section {
@@ -16,16 +15,29 @@
   align-items: center;
   justify-content: space-around;
   background-color: #1F4451;
-  height: 75rem;
   height: 922px;
   color: white;
-  
-}
-
-.faqs-container {
-  color: white;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .overlay {
   width: 100%;
+}
+
+.faqs {
+  width: 100%;
+  max-width: 768px;
+  margin: 15px;
+  padding: 25px;
+  text-transform: none;
+}
+
+.faqs .faq {
+  margin: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
 }

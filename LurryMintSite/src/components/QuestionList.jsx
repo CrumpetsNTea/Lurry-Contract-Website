@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react';
 import '../styles/QuestionList.css';
+import FAQ from './FAQ';
 
 
 function QuestionList() {
@@ -21,25 +22,24 @@ function QuestionList() {
       question: "What can I do with my Floatie Lurry?",
       answer: "Simply put, anything. However if you're looking for a more, as Lurry would say (or quack) technical answer - once minted, you retain full ownership rights over your Floatie Lurry. Go ahead and talk to it about all those bugs you found in your code or show it off to your programming buddies!",
       open: false
+    },
+    {
+      question: "What is Metamask?",
+      answer: "Metamask is a software wallet that lives on your chrome browser.",
+      open: false
     }
   ]);
 
 return (
-  <>
-
   <div className="faq-section">
     <h1>FAQ Section </h1>
-    <div className="faqs-container">
-      {faqs.map((faq, index) => (
-        <div>
-       {faq.question}<br/>
-       </div>
+    <div className="faqs">
+      {faqs.map((faq, i) => (
+        <FAQ faq={faq} index={i}/>
       ))}
     </div>
   </div>
-  <img src="/images/overlayv4.png" alt="chalkboard overlay" className="overlay"/>
-  </>
-)
+  );
 }
 
 export default QuestionList;
