@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Navigation.css';
+import MintPage from '../Mint';
 
 
 
