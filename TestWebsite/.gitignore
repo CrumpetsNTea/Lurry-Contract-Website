@@ -1,6 +1,4 @@
 node_modules
-<<<<<<< HEAD
-
 .env
 coverage
 coverage.json
@@ -10,5 +8,3 @@ typechain
 cache
 artifacts
 hardhat.config.js
-=======
->>>>>>> component/navigation
