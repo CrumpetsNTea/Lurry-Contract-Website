@@ -6,7 +6,11 @@ import Footer from './Footer';
 function Questions() {
 
   return (
-    <div></div>
+    <>
+   <QuestionList />
+   <TeamList />
+   <Footer />
+   </>
   )
 }
 

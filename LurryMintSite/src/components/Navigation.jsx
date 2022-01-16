@@ -18,7 +18,7 @@ export default function Navigation() {
         </ul>
       </nav>
       <a className="mint" href="#">
-        <button>Connect Wallet</button>
+        <button>Connect</button>
       </a>
       </div>
     </>

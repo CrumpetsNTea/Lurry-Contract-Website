@@ -18,20 +18,23 @@ function QuestionList() {
     },
     {
       question: "What can I do with my Floatie Lurry?",
-      answer: "Simply put, anything. However if you're looking for a more, as Lurry would say (or quack) technical answer - once minted, you retain full ownership rights over your Floatie Lurry. Go ahead and talk to it about all those bugs you found in your code or show it off to your friends and family!"
+      answer: "Simply put, anything. However if you're looking for a more, as Lurry would say (or quack) technical answer - once minted, you retain full ownership rights over your Floatie Lurry. Go ahead and talk to it about all those bugs you found in your code or show it off to your friends and family!",
+      open: false
     }
-  ])
+  ]);
 
 return (
-  <div className="faqs-list">
-
+  <div>
+    <h1>FAQ Section </h1>
+    <div className="faqs-container">
+      {faqs.map((faq, i) => (
+        <div>{faqs.question}<br></br>
+        </div>
+      ))}
+    </div>
 
   </div>
-
-
 )
-
-
 }
 
 export default QuestionList;
