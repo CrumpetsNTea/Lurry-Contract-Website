@@ -78,7 +78,7 @@ border-radius: 20rem;
 font-family: Raleway;
 font-style: normal;
 font-weight: bold;
-font-size: 1.2vw;
+font-size: 1.37vw;
 text-align: center;
 
 color: #000000;
@@ -89,10 +89,16 @@ cursor: pointer;
 
 }
 
-.connect-wallet-button:hover {background-color: #e8c529}
+        .connect-wallet-button:hover {background-color: #e8c529}
 
-.connect-wallet-button:active {
-  background-color: #debc26;
-    box-shadow: 0 0.1rem #666;
-  transform: translateY(0.2rem);
+                  .connect-wallet-button:active {
+                    background-color: #debc26;
+                      box-shadow: 0 0.1rem #666;
+                        transform: translateY(0.2rem);
+                  }
+
+
+.mint-count {
+  font-family: 'Callie Chalk Font', sans-serif;
+
 }

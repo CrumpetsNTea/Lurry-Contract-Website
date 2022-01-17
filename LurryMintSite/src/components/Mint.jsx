@@ -3,7 +3,10 @@ import { ethers } from "ethers";
 import SecretLurrySociety from '../utils/SecretLurrySociety.json'
 import '../styles/Mint.css'
 
+
 const MintPage = () => {
+  const [currentMintCount, setCurrentMintCount] = useState(12)
+
   // State variable to store user's public wallet address
   const [currentAccount, setCurrentAccount] = useState("");
   
@@ -52,6 +55,18 @@ const MintPage = () => {
     }
   }
 
+  // Function for temporary alert message to let user know that their NFT is minting
+  const tempAlert = (msg,duration) => {
+    let el = document.createElement("div");
+    el.setAttribute("style",  
+    "font-family: Raleway;font-style: normal;font-weight: bold;font-size: 2.3vw;position:absolute;top:30%;left:43%;background-color:white;width:20%;");
+    el.innerHTML = msg;
+    setTimeout(function(){
+     el.parentNode.removeChild(el);
+    },duration);
+    document.body.appendChild(el);
+   }
+
   const askContractToMintNft = async () => {
     const CONTRACT_ADDRESS = "0x26b5180d5ce04124ED1f4402f7c9fDB108856d8c";
  
@@ -67,15 +82,20 @@ const MintPage = () => {
         let nftTxn = await connectedContract.mintALurry();
 
         console.log("Mining...please wait.")
+        tempAlert("Mining your NFT... please wait.", 18000);
         await nftTxn.wait();
 
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
-        alert(`Mint Successful! See transaction here: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        alert(`Mint Successful! Clicking okay will redirect you to the etherscan transaction to confirm the mint.`);
+        setCurrentMintCount(currentMintCount - 1);
+        window.open(`https://rinkeby.etherscan.io/tx/${nftTxn.hash}`, '_blank') || window.location.replace('https://rinkeby.etherscan.io/tx/${nftTxn.hash');
       } else {
         console.log("Ethereum object doesn't exist!")
       }
     } catch (error) {
       console.log(error)
+      alert(`Sorry, there was an error, please try again.`);
+
     }
   }
 
@@ -93,6 +113,8 @@ const MintPage = () => {
     checkIfWalletIsConnected();
   }, [])
 
+
+
   return (
     <div className="MintPage">
 
@@ -107,11 +129,12 @@ const MintPage = () => {
             </button>
             </div>
           )}
-
-
-
     </div>
-          </div>
+    <div className="mint-count">
+      <h1> Lurry's remaining: {currentMintCount} / 12</h1>
+    </div>
+
+  </div>
 
 
   );
