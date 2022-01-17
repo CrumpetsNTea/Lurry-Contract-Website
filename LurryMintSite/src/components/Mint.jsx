@@ -130,10 +130,11 @@ const MintPage = () => {
             </div>
           )}
     </div>
+    <div className="mint-count-container">
     <div className="mint-count">
       <h1> Lurry's remaining: {currentMintCount} / 12</h1>
     </div>
-
+    </div>
   </div>
 
 
