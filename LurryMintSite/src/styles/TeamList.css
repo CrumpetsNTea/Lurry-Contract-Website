@@ -1,5 +1,11 @@
-.team {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+/* Styles for TeamList component */
+/* import poppins from google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+
+.team-header {
+  font-family: "Poppins", sans-serif;
 }

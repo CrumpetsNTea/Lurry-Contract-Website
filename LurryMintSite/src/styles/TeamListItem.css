@@ -8,20 +8,43 @@
   padding: 0;
 }
 
-.card {
+.card-body {
+  border: solid green;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
 }
 
+
+
 .card-image {
-  max-height: 50%;
-  max-width: 50%;
+  width:200px;
+  height:200px;
+ border-radius: 150px;
 }
 
 .card-title, .card-description {
-  color: white;
   font-family: "Poppins", sans-serif;
+  margin: 2rem;
 }
+
+.card-title {
+  font-size: 20px;
+}
+
+.team-cards, .card-body {
+}
+
+.team-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 45px 25px 45px;
+}
+
 
 

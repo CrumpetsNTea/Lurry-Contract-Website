@@ -1,16 +1,14 @@
 import React from 'react';
-import TeamListItem from './TeamListItem';
+import TeamListItems from './TeamListItem';
 import '../styles/TeamList.css';
 
 function TeamList() {
 
   return (
-    <>
-    <section className="team">
-    <TeamListItem />
-    </section>
-    </>
-
+    <div>
+      <h1 className="team-header">Meet the Team</h1>
+    <TeamListItems />
+    </div>
   )
 }
 

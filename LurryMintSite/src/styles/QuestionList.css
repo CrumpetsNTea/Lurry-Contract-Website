@@ -17,7 +17,6 @@
   background-color: #1F4451;
   height: 922px;
   color: white;
-  border: solid red;
   padding: 0px;
   font-size: 20px;
   font-weight: 700;
@@ -36,7 +35,6 @@
   margin: 15px;
   padding: 25px;
   text-transform: none;
-  border: solid blue;
 }
 
 .faqs .faq {
