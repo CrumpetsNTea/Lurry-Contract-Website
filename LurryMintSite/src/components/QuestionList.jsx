@@ -3,7 +3,6 @@
 import React, {useState} from 'react';
 import '../styles/QuestionList.css';
 import FAQ from './FAQ.jsx';
-import overlayv4 from '../images/overlayv4.png';
 
 
 function QuestionList() {
@@ -16,7 +15,7 @@ function QuestionList() {
     },
     {
       question: "What are NFTs?",
-      answer: "NFTs (Non-Fungible Tokens) are digital assets which live on the blockchain. These assets come in many Use cases of NFTs include:  ",
+      answer: "NFTs (Non-Fungible Tokens) are digital assets which live on the blockchain.",
       open: false
     },
     {

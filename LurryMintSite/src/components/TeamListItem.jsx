@@ -10,7 +10,16 @@ function TeamListItems() {
     <>
     <div className="team-cards"> 
       <div className="card-body">
+        <div className="image">
         <img src={iouriteam} alt="iouri" className="card-image"/>
+        <div className="image__overlay">
+          <div className="image__title">
+            Iouri Volkov
+          </div>
+          <p className="image__description">Full-Stack Dev</p>
+        </div>
+        </div>
+ 
         <h2 className="card-title">Iouri Volkov</h2>
        
       </div>
