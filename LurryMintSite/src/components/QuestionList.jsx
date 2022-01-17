@@ -10,31 +10,37 @@ function QuestionList() {
   // set default state to questions and answers - set one card to open  
   const [faqs, setFaqs] = useState([
     {
-      question: "What are NFTs?",
-      answer: "Immutable assets that live on the blockchain.",
-      open: true
+      question: "What is Metamask?",
+      answer: "Metamask is crypto wallet available as a Chrome browser extension. It is free to use and supports both mainnet (public blockchain), as well as testnet (testing environment) accounts.",
+      open: false
     },
     {
-      question: "How can I mint a Floatie Lurry?",
-      answer: "Connect with metamask and click approve to mint a Floatie Lurry",
+      question: "What are NFTs?",
+      answer: "NFTs (Non-Fungible Tokens) are digital assets which live on the blockchain. These assets come in many Use cases of NFTs include:  ",
+      open: false
+    },
+    {
+      question: "How can I mint an NFT?",
+      answer: "Connect with metamask and click 'Approve' to mint a Floatie Lurry. For a demonstration, check out our step-by-step guide in the section below!",
       open: false
     },
     {
       question: "What can I do with my Floatie Lurry?",
-      answer: "Anything!",
-      open: false
-    },
-    {
-      question: "What is Metamask?",
-      answer: "Metamask is a software wallet that lives on your chrome browser.",
-      open: false
-    },
-    {
-      question: "What is the mint price for a Floatie Lurry?",
-      answer: "Just for today - it's free.",
+      answer: "Absolutely anything you want! Post-mint, as long as the NFT remains in your wallet, you are free to use it in any way you wish!",
       open: false
     }
   ]);
+
+  const toggleFAQ = (index) => {
+    setFaqs(faqs.map((faq, index) => {
+      if (index === index) {
+        faq.open = !faq.open
+      } else {
+        faq.open = false;
+      }
+      return faq;
+    }))
+  }
 
 return (
   <div className="faq-container">
@@ -42,7 +48,7 @@ return (
     <h1>FAQs</h1>
     <div className="faqs">
       {faqs.map((faq, i) => (
-        <FAQ faq={faq} index={i}/>
+        <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ}/>
       ))}
     </div>
   </div>
