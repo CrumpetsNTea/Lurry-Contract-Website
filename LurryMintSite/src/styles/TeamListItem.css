@@ -2,22 +2,20 @@
 /* import poppins from google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* targets the team headshots */
 .card-body {
-  border: solid green;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: black;
+  padding: 0 30px 0 30px;
 }
-
 
 
 .card-image {
@@ -26,24 +24,25 @@
  border-radius: 150px;
 }
 
+
 .card-title, .card-description {
   font-family: "Poppins", sans-serif;
   margin: 2rem;
+  color: white;
 }
+
 
 .card-title {
   font-size: 20px;
 }
 
-.team-cards, .card-body {
-}
 
 .team-cards {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 0 45px 25px 45px;
+  margin: 80px 200px 25px 200px;
 }
 
 

@@ -9,18 +9,19 @@
   padding: 0;
 }
 
+/* targets FAQ header + q/a's */
 .faq-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #1F4451;
   height: 922px;
   color: white;
-  padding: 0px;
+  padding: 100px 35px 200px 35px;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
 }
 
 .overlay {
@@ -37,9 +38,18 @@
   text-transform: none;
 }
 
+
 .faqs .faq {
   margin: 15px;
   height: 100px;
   padding: 15px;
-  border: solid black 2px;
+ background-color: white;
+ box-shadow: 0px 0px 4px black;
 }
+
+.faq-question, .faq-answer {
+  color: black;
+}
+
+
+

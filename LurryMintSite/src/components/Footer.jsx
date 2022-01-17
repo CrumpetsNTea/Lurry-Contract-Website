@@ -1,12 +1,16 @@
 import React from 'react';
 import '../styles/Footer.css';
 
-function Footer () {
-  <footer className="footer">
-    Secret Lurry Society 
-  </footer>
+function FooterBar () {
+  <div className="main-footer">
+    <div className="container">
+
+    </div>
+    <h1>Footer</h1>
+  </div>
+
 
 }
 
-export default Footer;
+export default FooterBar;
 

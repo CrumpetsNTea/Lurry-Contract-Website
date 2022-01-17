@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function FAQ(faq, index) {
+function FAQ({faq, index}) {
 
   return (
     <div className={"faq " + (faq.open ? 'open' : '')}

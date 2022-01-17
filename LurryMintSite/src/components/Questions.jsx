@@ -1,7 +1,6 @@
-import React from react;
+import React from 'react';
 import QuestionList from './QuestionList';
 import TeamList from './TeamList';
-import Footer from './Footer';
 
 function Questions() {
 
@@ -9,7 +8,6 @@ function Questions() {
     <>
    <QuestionList />
    <TeamList />
-   <Footer />
    </>
   )
 }
