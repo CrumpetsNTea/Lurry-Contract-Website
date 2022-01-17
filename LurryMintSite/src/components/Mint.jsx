@@ -70,6 +70,7 @@ const MintPage = () => {
         await nftTxn.wait();
 
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        alert(`Mint Successful! See transaction here: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
       } else {
         console.log("Ethereum object doesn't exist!")
       }
@@ -80,9 +81,11 @@ const MintPage = () => {
 
   // Render Methods
   const renderNotConnectedContainer = () => (
+    <div className="connect-wallet-container">
     <button onClick={connectWallet} className="connect-wallet-button">
       Connect Wallet
     </button>
+    </div>
   );
 
   // Runs the check function on page load
@@ -95,8 +98,6 @@ const MintPage = () => {
 
     <div className="welcome-box">
       <img className="Lurry-and-Info" src="https://gateway.pinata.cloud/ipfs/QmQedLnhM1CPetDQLMtb1Td91kAfK6VyG1NtWuCRJuwyVJ?preview=1" alt="LURRY"></img>
-          </div>
-          <div className="button-container">
       {currentAccount === "" ? (
             renderNotConnectedContainer()
           ) : (
@@ -107,10 +108,11 @@ const MintPage = () => {
             </div>
           )}
 
-    </div>
 
 
     </div>
+          </div>
+
 
   );
 };
