@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-// import { Web3 } from "web3";
 
 import SecretLurrySociety from '../utils/SecretLurrySociety.json'
 import '../styles/Mint.css'
@@ -8,12 +7,12 @@ import '../styles/Mint.css'
 
 
 const MintPage = () => {
-  const [currentMintCount, setCurrentMintCount] = useState(12)
+  const [currentMintCount, setCurrentMintCount] = useState(0)
 
-  // setCurrentMintCount(connectedContract.newItemId())
-  // State variable to store user's public wallet address
   const [currentAccount, setCurrentAccount] = useState("");
+
   
+  // State variable to store user's public wallet address
   const checkIfWalletIsConnected = async () => {
     // First make sure we have access to window.ethereum
     const { ethereum } = window;
@@ -38,6 +37,14 @@ const MintPage = () => {
     }
   }
 
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, [])
+
+  useEffect(() => {
+    getLurryId();
+  }, [])
+
   // Connect wallet function used when user clicks connect wallet button
   const connectWallet = async () => {
     try {
@@ -59,6 +66,19 @@ const MintPage = () => {
     }
   }
 
+
+  const getLurryId = async () => {
+    const { ethereum } = window;
+    const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, SecretLurrySociety.abi, provider);
+  
+    connectedContract.getCurrentLurryId()
+    .then(function(result){
+        setCurrentMintCount(result.toNumber());
+    })
+  };
+
   // Function for temporary alert message to let user know that their NFT is minting
   const tempAlert = (msg,duration) => {
     let el = document.createElement("div");
@@ -72,10 +92,11 @@ const MintPage = () => {
    }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0xbF48c28f48aE04015cFa1212b52c200061917b9e";
+    const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
 
-    if (currentMintCount <= 0 ) {
+    if (currentMintCount >= 12 ) {
       alert("All Lurry's have been minted! Sorry!")
+      return
     } else {
     try {
       const { ethereum } = window;
@@ -85,8 +106,6 @@ const MintPage = () => {
         const signer = provider.getSigner();
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, SecretLurrySociety.abi, signer);
         
-        connectedContract.getCurrentLurryId()
-        .then(console.log);
 
         console.log("Going to pop wallet now to pay gas...")
         let nftTxn = await connectedContract.mintALurry();
@@ -99,7 +118,11 @@ const MintPage = () => {
 
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
         alert(`Mint Successful! Clicking okay will redirect you to the etherscan transaction to confirm the mint.`);
-        setCurrentMintCount(currentMintCount - 1);
+        connectedContract.getCurrentLurryId()
+        .then(function(result){
+          console.log(result.toNumber())
+          setCurrentMintCount(result.toNumber())
+        })  
         window.open(`https://rinkeby.etherscan.io/tx/${nftTxn.hash}`, '_blank') || window.location.replace('https://rinkeby.etherscan.io/tx/${nftTxn.hash');
       } else {
         console.log("Ethereum object doesn't exist!")
@@ -107,7 +130,6 @@ const MintPage = () => {
     } catch (error) {
       console.log(error)
       alert(`Sorry, there was an error, please try again. Error: ${error}`);
-
     }
   }
 }
@@ -121,11 +143,27 @@ const MintPage = () => {
     </div>
   );
 
-  // Runs the check function on page load
-  useEffect(() => {
-    checkIfWalletIsConnected();
-  }, [])
-
+const renderMintButton = () => {
+  if (currentMintCount < 12) {
+    return (
+  <div className="mint-button-flexbox">
+  <div className="mint-button-container">
+  <button onClick={askContractToMintNft} className="mint-button">
+    Mint!
+  </button>
+  </div>
+  </div>
+  )
+  } else {
+    return (
+      <div className="no-flexbox">
+      <div className="no-container">
+      <p className="no-button">Collection Sold Out</p>
+    </div>
+    </div>
+    )
+  }
+}
 
 
   return (
@@ -133,21 +171,12 @@ const MintPage = () => {
 
     <div className="welcome-box">
       <img className="Lurry-and-Info" src="https://gateway.pinata.cloud/ipfs/QmQedLnhM1CPetDQLMtb1Td91kAfK6VyG1NtWuCRJuwyVJ?preview=1" alt="LURRY"></img>
-      {currentAccount === "" ? (
-            renderNotConnectedContainer()
-          ) : (
-            <div className="mint-button-flexbox">
-            <div className="mint-button-container">
-            <button onClick={askContractToMintNft} className="mint-button">
-              Mint!
-            </button>
-            </div>
-            </div>
-          )}
+      {currentAccount === "" ? renderNotConnectedContainer() : renderMintButton()}
+
     </div>
     <div className="mint-count-container">
     <div className="mint-count">
-      <h1> Lurry's remaining: {currentMintCount} / 12</h1>
+      <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
     </div>
     </div>
   </div>

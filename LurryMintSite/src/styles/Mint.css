@@ -3,7 +3,6 @@ body {
 
 }
 
-
 .welcome-box {
   display: flex;
   justify-content: center;
@@ -67,6 +66,38 @@ body {
                 box-shadow: 0 0.1rem #666;
                   transform: translateY(0.2rem);
           }
+
+.no-flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 30vmin;
+  top: 1rem;
+}
+
+.no-container {
+  z-index: 1;
+}
+
+.no-button {
+  width: 22vmin;
+  height: 5.5vmin;
+  background: grey;
+  border: none;
+  border-radius: 20rem;
+  
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.3vmin;
+  text-align: center;
+  
+  color: rgb(91, 91, 91);
+  
+  float: right;
+  cursor:default;
+  }
 
 .connect-wallet-container {
   position: relative;
