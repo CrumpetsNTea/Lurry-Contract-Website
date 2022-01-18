@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 
+
 function Footer () {
 
   return(
@@ -8,9 +9,6 @@ function Footer () {
 
       <section className="footer-info-left">
         <ul className="left-side-footer">
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
       </section>
 
@@ -19,8 +17,8 @@ function Footer () {
       </section>
 
       <section className="footer-info-right">
-        12 Floatie Lurrys quacking together on the blockchain.<br />
-        ©2022 SECRET LURRY SOCIETY | ALL RIGHTS RESERVED
+        12 Floatie Lurrys quacking together on Ethereum.<br />
+        ©2022 SECRET LURRY SOCIETY <br /> ALL RIGHTS RESERVED
       </section>
 
     </section>
