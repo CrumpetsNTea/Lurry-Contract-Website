@@ -5,7 +5,7 @@ import MintPage from './components/Mint';
 import Roadmap from './components/Roadmap';
 import QuestionList from './components/QuestionList';
 import TeamList from './components/TeamList';
-import FooterNav from './components/Footer';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -16,7 +16,7 @@ return (
   <TeamList />
   <QuestionList/>
   <Roadmap />
-  <FooterNav />
+  <Footer />
   </>
 )
 };
