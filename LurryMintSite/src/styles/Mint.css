@@ -23,17 +23,25 @@ body {
 
 }
 
-
-.mint-button-container {
+.mint-button-flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  z-index: 1;
   right: 22vw;
   top: 1rem;
+
+
+
+}
+
+.mint-button-container {
+  z-index: 1;
 }
 
 .mint-button {
-  width: 15vw;
-  height: 4vw;
+  width: 15vmin;
+  height: 4vmin;
   background: #F4D12D;
   border: none;
   border-radius: 20rem;
@@ -41,7 +49,7 @@ body {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.3vw;
+  font-size: 2.3vmin;
   text-align: center;
   
   color: #000000;
@@ -97,15 +105,17 @@ cursor: pointer;
                         transform: translateY(0.2rem);
                   }
 
-
-.mint-count {
-  font-family: 'Callie Chalk Font', sans-serif;
-font-size: 2.3vh;
-}
-
 .mint-count-container {
 display: flex;
 position:relative ;
 justify-content: center;
+padding-top: 2rem;
+margin: 0rem;
 bottom: 12rem;
 }
+
+.mint-count {
+  font-family: 'Callie Chalk Font', sans-serif;
+  font-size: 1.5vmax;
+}
+

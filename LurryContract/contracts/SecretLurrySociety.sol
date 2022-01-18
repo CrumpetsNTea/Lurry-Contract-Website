@@ -18,15 +18,20 @@ contract SecretLurrySociety is ERC721URIStorage {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  constructor() ERC721 ("LURRY NFT", "LURRY") {
+  constructor() ERC721 ("Secret Lurry Society", "LURRY") {
     console.log("This is my NFT contract.");
   }
-
+ 
   function mintALurry() public {
     // Set the Lurry ID to the newest ID
     uint256 newItemId = _tokenIds.current();
+
     // Get all the JSON metadata from our function that we imported from Info.sol.
     string memory json = getLurry(newItemId);
+      
+      if (newItemId > 12) {
+        return;
+      } else {
     // Prepend data:application/json;base64, to our data.
     string memory finalTokenUri = string(
         abi.encodePacked("data:application/json;base64,", json)
@@ -45,5 +50,6 @@ contract SecretLurrySociety is ERC721URIStorage {
     // Increment the counter
     _tokenIds.increment();
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+    }
   }
 }

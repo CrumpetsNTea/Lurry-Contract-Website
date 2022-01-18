@@ -1,4 +1,6 @@
-   pragma solidity ^0.8.0;
+// SPDX-License-Identifier: UNLICENSED
+
+pragma solidity ^0.8.0;
 
 import { Base64 } from "./Base64.sol";
 
@@ -152,6 +154,8 @@ import { Base64 } from "./Base64.sol";
       json = json11;
     } else if (newItemId == 11) {
       json = json12;
+    } else if (newItemId > 11) {
+        return string('false');
     }
 
   return string(json);

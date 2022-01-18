@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
+// import { Web3 } from "web3";
+
 import SecretLurrySociety from '../utils/SecretLurrySociety.json'
 import '../styles/Mint.css'
+
 
 
 const MintPage = () => {
   const [currentMintCount, setCurrentMintCount] = useState(12)
 
+  // setCurrentMintCount(connectedContract.newItemId())
   // State variable to store user's public wallet address
   const [currentAccount, setCurrentAccount] = useState("");
   
@@ -68,8 +72,11 @@ const MintPage = () => {
    }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0x26b5180d5ce04124ED1f4402f7c9fDB108856d8c";
- 
+    const CONTRACT_ADDRESS = "0xc8B3F8487853D41037548b638B283bff7B6694d0";
+
+    if (currentMintCount <= 0 ) {
+      alert("All Lurry's have been minted! Sorry!")
+    } else {
     try {
       const { ethereum } = window;
 
@@ -78,12 +85,18 @@ const MintPage = () => {
         const signer = provider.getSigner();
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, SecretLurrySociety.abi, signer);
         
+        let tx = await connectedContract.getCurrentLurryId();
+        let receipt = await tx.wait();
+        let logs = receipt.events;
+        console.log(logs);
         console.log("Going to pop wallet now to pay gas...")
         let nftTxn = await connectedContract.mintALurry();
 
         console.log("Mining...please wait.")
         tempAlert("Mining your NFT... please wait.", 18000);
         await nftTxn.wait();
+
+ 
 
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
         alert(`Mint Successful! Clicking okay will redirect you to the etherscan transaction to confirm the mint.`);
@@ -94,10 +107,11 @@ const MintPage = () => {
       }
     } catch (error) {
       console.log(error)
-      alert(`Sorry, there was an error, please try again.`);
+      alert(`Sorry, there was an error, please try again. Error: ${error}`);
 
     }
   }
+}
 
   // Render Methods
   const renderNotConnectedContainer = () => (
@@ -123,10 +137,12 @@ const MintPage = () => {
       {currentAccount === "" ? (
             renderNotConnectedContainer()
           ) : (
+            <div className="mint-button-flexbox">
             <div className="mint-button-container">
             <button onClick={askContractToMintNft} className="mint-button">
               Mint!
             </button>
+            </div>
             </div>
           )}
     </div>
