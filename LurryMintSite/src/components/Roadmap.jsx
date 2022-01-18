@@ -5,6 +5,7 @@ export default function Roadmap() {
   const [slide, setSlide] = useState(1);
   const [transition, setTransition] = useState("slide-left");
 
+  // Animation when increasing lurry slide
   const increaseSlide = () => {
     if (slide < 2) {
       setTransition("slide-left-out");
@@ -15,6 +16,7 @@ export default function Roadmap() {
     }
   };
 
+  // Animation when decreasing lurry slide
   const decreaseSlide = () => {
     if (slide > 0) {
       setTransition("slide-right-out");
@@ -27,20 +29,26 @@ export default function Roadmap() {
 
   return (
     <section className="roadmap">
-      {slide === 0 && (
-        <ul className="lurry-container">
+      <ul className="lurry-container">
+        <button onClick={decreaseSlide} className="carousel-arrow">
+          <img
+            className="mirrored arrow"
+            src="../../images/Icon-arrow-right-white.png"
+          ></img>
+        </button>
+        {slide === 0 && (
           <div className="contain-slide">
             <div className={transition}>
               <img
-                className="lurry-png"
+                className="lurry-png large-only"
                 src="../../images/3DMovieLurry.png"
               ></img>
               <img
-                className="lurry-png"
+                className="lurry-png medium-large-only"
                 src="../../images/BiohazardLurry.png"
               ></img>
               <img
-                className="lurry-png"
+                className="lurry-png small-excluded"
                 src="../../images/CrayonLurry.png"
               ></img>
               <img
@@ -49,28 +57,20 @@ export default function Roadmap() {
               ></img>
             </div>
           </div>
-          <button onClick={increaseSlide} className="carousel-arrow">
-            <img src="../../images/Icon-arrow-right-white.png"></img>
-          </button>
-        </ul>
-      )}
-      {slide === 1 && (
-        <ul className="lurry-container">
-          <button onClick={decreaseSlide} className="carousel-arrow">
-            <img
-              className="mirrored"
-              src="../../images/Icon-arrow-right-white.png"
-            ></img>
-          </button>
+        )}
+        {slide === 1 && (
           <div className="contain-slide">
             <div className={transition}>
               <img
-                className="lurry-png"
+                className="lurry-png large-only"
                 src="../../images/GentlemanLurry.png"
               ></img>
-              <img className="lurry-png" src="../../images/Lurry.png"></img>
               <img
-                className="lurry-png"
+                className="lurry-png medium-large-only"
+                src="../../images/Lurry.png"
+              ></img>
+              <img
+                className="lurry-png small-excluded"
                 src="../../images/LurryinDisguise.png"
               ></img>
               <img
@@ -79,31 +79,20 @@ export default function Roadmap() {
               ></img>
             </div>
           </div>
-          <button onClick={increaseSlide} className="carousel-arrow">
-            <img src="../../images/Icon-arrow-right-white.png"></img>
-          </button>
-        </ul>
-      )}
-      {slide === 2 && (
-        <ul className="lurry-container">
-          <button onClick={decreaseSlide} className="carousel-arrow">
-            <img
-              className="mirrored"
-              src="../../images/Icon-arrow-right-white.png"
-            ></img>
-          </button>
+        )}
+        {slide === 2 && (
           <div className="contain-slide">
             <div className={transition}>
               <img
-                className="lurry-png"
+                className="lurry-png large-only"
                 src="../../images/StrawburryLurry.png"
               ></img>
               <img
-                className="lurry-png"
+                className="lurry-png medium-large-only"
                 src="../../images/BiohazardLurry.png"
               ></img>
               <img
-                className="lurry-png"
+                className="lurry-png small-excluded"
                 src="../../images/CrayonLurry.png"
               ></img>
               <img
@@ -112,8 +101,15 @@ export default function Roadmap() {
               ></img>
             </div>
           </div>
-        </ul>
-      )}
+        )}
+        <button onClick={increaseSlide} className="carousel-arrow">
+          <img
+            className="arrow"
+            src="../../images/Icon-arrow-right-white.png"
+          ></img>
+        </button>
+      </ul>
+
       <div className="roadmap-description">
         <div className="roadmap-description-info">
           <h1 className="roadmap-description-header">ROADMAP & UTILITY</h1>
@@ -128,7 +124,9 @@ export default function Roadmap() {
             </h4>
             <h4 className="description-steps">
               <span className="bold">Step 3: </span>
-              Marketing - setup Discord, Telegram, Reddit and Twitter channels
+              Marketing - setup Discord, Telegram,
+              <br className="phones-only" />
+              Reddit and Twitter channels
             </h4>
           </div>
         </div>

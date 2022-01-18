@@ -38,6 +38,7 @@
 .lurry-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 90%;
   background-color: black;
   border-radius: 40px;
@@ -74,7 +75,7 @@
   cursor: pointer;
   background: black;
   border: none;
-  object-fit: contain;
+  height: 100%;
 }
 
 .slide-right {
@@ -123,9 +124,17 @@
   overflow: hidden;
 }
 
+.arrow {
+  width: clamp(2rem, 10vw, 8rem);
+}
+
 .mirrored {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.phones-only {
+  display: none;
 }
 
 @-webkit-keyframes slide {
@@ -161,5 +170,68 @@
 @keyframes slide-left-out {
   100% {
     left: -2100px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .roadmap-description {
+    display: flex;
+    align-items: center;
+  }
+
+  .roadmap-description-info {
+    margin-left: 0;
+  }
+
+  .large-only {
+    display: none;
+  }
+
+  .lurry-png {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .roadmap-description-header {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+  }
+
+  .description-steps {
+    font-size: clamp(0.8rem, 2.5vw, 2rem);
+  }
+
+  .bold {
+    font-size: clamp(0.8rem, 2.5vw, 2rem);
+  }
+
+  .lurry-png {
+    width: 50%;
+  }
+
+  .medium-large-only {
+    display: none;
+  }
+
+  .phones-only {
+    display: block;
+  }
+
+  .lurry-container {
+    height: 25rem;
+  }
+
+  .carousel-arrow {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lurry-png {
+    width: 100%;
+  }
+
+  .small-excluded {
+    display: none;
   }
 }
