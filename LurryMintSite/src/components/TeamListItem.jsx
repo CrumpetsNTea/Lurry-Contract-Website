@@ -13,6 +13,8 @@ function TeamListItems() {
     <>
     <div className="team-cards"> 
       <div className="card-body">
+
+
         <img src={iouriteam} alt="iouri" className="card-image" />
         <h2 className="card-title">Iouri Volkov</h2>
        
