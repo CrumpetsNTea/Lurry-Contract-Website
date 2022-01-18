@@ -10,11 +10,11 @@ function Footer () {
     <section className="footer">
 
       <section className="footer-info-left">
-        <ul className="left-side-footer">
-          <SocialIcon url="https://twitter.com/LurrySecret"/>
-          <SocialIcon url="https://discord.com/channels/932802763690246214/932802763690246216" />
-          <SocialIcon url="https://testnets.opensea.io/collection/secret-lurry-society" />
-        </ul>
+        <div className="left-side-footer">
+          <SocialIcon url="https://twitter.com/LurrySecret" className="twitter"/>
+          <SocialIcon url="https://discord.com/channels/932802763690246214/932802763690246216"/>
+          <a href="https://testnets.opensea.io/collection/secret-lurry-society"> <img src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-White.png" className="opensea-logo"/></a>
+        </div>
       </section>
 
       <section className="footer-info-center">
