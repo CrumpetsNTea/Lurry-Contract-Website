@@ -85,10 +85,9 @@ const MintPage = () => {
         const signer = provider.getSigner();
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, SecretLurrySociety.abi, signer);
         
-        let tx = await connectedContract.getCurrentLurryId();
-        let receipt = await tx.wait();
-        let logs = receipt.events;
-        console.log(logs);
+        connectedContract.getCurrentLurryId()
+        .then(console.log);
+
         console.log("Going to pop wallet now to pay gas...")
         let nftTxn = await connectedContract.mintALurry();
 
