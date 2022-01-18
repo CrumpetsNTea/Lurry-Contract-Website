@@ -21,6 +21,11 @@ contract SecretLurrySociety is ERC721URIStorage {
   constructor() ERC721 ("Secret Lurry Society", "LURRY") {
     console.log("This is my NFT contract.");
   }
+
+
+  function getCurrentLurryId() public view returns (uint256) {
+  return _tokenIds.current();
+}
  
   function mintALurry() public {
     // Set the Lurry ID to the newest ID
@@ -52,4 +57,5 @@ contract SecretLurrySociety is ERC721URIStorage {
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
     }
   }
+
 }

@@ -3,7 +3,7 @@ require('dotenv').config();
 
 
 
-let address = '0xE53cE92C77b3eDe5D27483A124D1Ce99CbA6DB6b';
+let address = '0xbF48c28f48aE04015cFa1212b52c200061917b9e';
 let abi = require('./artifacts/contracts/SecretLurrySociety.sol/SecretLurrySociety.json');
 
 const providerUrl = process.env.MY_URL;
