@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
+import { ReactDOM } from 'react';
+import { SocialIcon } from 'react-social-icons';
 
 
 function Footer () {
@@ -9,6 +11,9 @@ function Footer () {
 
       <section className="footer-info-left">
         <ul className="left-side-footer">
+          <SocialIcon url="https://twitter.com/LurrySecret"/>
+          <SocialIcon url="https://discord.com/channels/932802763690246214/932802763690246216" />
+          <SocialIcon url="https://testnets.opensea.io/collection/secret-lurry-society" />
         </ul>
       </section>
 
