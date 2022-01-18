@@ -72,7 +72,7 @@ const MintPage = () => {
    }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0xc8B3F8487853D41037548b638B283bff7B6694d0";
+    const CONTRACT_ADDRESS = "0xE53cE92C77b3eDe5D27483A124D1Ce99CbA6DB6b";
 
     if (currentMintCount <= 0 ) {
       alert("All Lurry's have been minted! Sorry!")
