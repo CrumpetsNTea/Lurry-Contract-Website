@@ -15,7 +15,7 @@
 
 
 .footer-info-left {
-  margin-top: 40px;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -26,6 +26,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .opensea-logo {

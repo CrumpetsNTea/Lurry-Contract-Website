@@ -9,6 +9,10 @@ function Footer () {
   return(
     <section className="footer">
 
+<section className="footer-info-center">
+      <img src="/images/SLSlogo.png" alt="Secret Lurry Society Logo" className="logo"/>
+      </section>
+
       <section className="footer-info-left">
         <div className="left-side-footer">
           <SocialIcon url="https://twitter.com/LurrySecret" className="twitter"/>
@@ -17,9 +21,6 @@ function Footer () {
         </div>
       </section>
 
-      <section className="footer-info-center">
-      <img src="/images/SLSlogo.png" alt="Secret Lurry Society Logo" className="logo"/>
-      </section>
 
       <section className="footer-info-right">
         12 Floatie Lurrys quacking together on Ethereum.<br />

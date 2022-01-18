@@ -2,6 +2,9 @@ import React from 'react';
 import '../styles/TeamListItem.css';
 import iouriteam from '../images/iouriteam.jpg';
 import connor from '../images/connor.jpg';
+import iourihover from '../assets/iourihover.png';
+
+
 
 
 function TeamListItems() {
@@ -10,8 +13,7 @@ function TeamListItems() {
     <>
     <div className="team-cards"> 
       <div className="card-body">
-        <div className="image"></div>
-        <img src={iouriteam} alt="iouri" className="card-image"/>
+        <img src={iouriteam} alt="iouri" className="card-image" />
         <h2 className="card-title">Iouri Volkov</h2>
        
       </div>
