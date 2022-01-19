@@ -88,8 +88,6 @@ button {
 
 .hamburger-icon {
   background-color: transparent;
-  position: relative;
-  right: 4rem;
   border: none;
   color: white;
 }
