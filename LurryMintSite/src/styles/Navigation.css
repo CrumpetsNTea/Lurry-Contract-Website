@@ -1,7 +1,7 @@
 /* navbar css */
 
 /* import poppins from google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,8 @@
   box-sizing: border-box;
 }
 
-li, a {
+li,
+a {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -18,24 +19,21 @@ li, a {
   text-decoration: none;
 }
 
-
 button {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
 
-
 .navbar {
   display: flex;
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  background: #0C303D;
+  background: #0c303d;
   padding: 0 45px 0 45px;
   box-shadow: 0 0 8px 0 #173641;
 }
-
 
 .navbar > .logo {
   margin: 1rem;
@@ -49,6 +47,8 @@ button {
 }
 
 .nav-links {
+  display: flex;
+  justify-content: start;
   list-style: none;
 }
 
@@ -63,12 +63,12 @@ button {
 }
 
 .nav-links li a:hover {
-  color: #1D414D;
+  color: #1d414d;
 }
 
-button {
+.button {
   padding: 9px 25px;
-  background-color: #F4D12D;
+  background-color: #f4d12d;
   border: none;
   border-radius: 2rem;
   cursor: pointer;
@@ -77,14 +77,47 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+.button:hover {
   background-color: #ffe77b;
 }
 
+.phones-only {
+  display: none;
+  box-shadow: none;
+}
 
+.hamburger-icon {
+  background-color: transparent;
+  position: relative;
+  right: 4rem;
+  border: none;
+  color: white;
+}
 
+.dropdown {
+  background: #0c303d;
+}
 
+@media screen and (max-width: 760px) {
+  .phones-only {
+    display: block;
+  }
 
+  .phones-excluded {
+    display: none;
+  }
 
+  .nav-links {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    padding-left: 2rem;
+    list-style: none;
+  }
+}

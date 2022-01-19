@@ -152,6 +152,7 @@ body {
   .connect-wallet-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     bottom: 0.5rem;
     width: clamp(0.5rem, 12vw, 8rem);
