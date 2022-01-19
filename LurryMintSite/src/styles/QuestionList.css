@@ -9,6 +9,8 @@
   padding: 0;
 }
 
+
+
 /* targets FAQ header + q/a's */
 .faq-container {
   display: flex;
@@ -85,5 +87,9 @@
 .faqs .faq.open .faq-answer {
   max-height: 1000px;
   opacity: 1;
+}
+
+.tutorial-video {
+  padding-left: 2.8vw;
 }
 

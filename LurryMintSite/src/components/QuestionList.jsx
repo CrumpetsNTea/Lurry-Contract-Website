@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import '../styles/QuestionList.css';
 import FAQ from './FAQ.jsx';
+import ReactPlayer from 'react-player';
 
 
 function QuestionList() {
@@ -20,7 +21,7 @@ function QuestionList() {
     },
     {
       question: "How can I mint an NFT?",
-      answer: "Connect with metamask and click 'Approve' to mint a Floatie Lurry. For a demonstration, check out our step-by-step guide in the section below!",
+      answer: "Connect with metamask and click 'Approve' to mint a Floatie Lurry. For a demonstration, check out our step-by-step tutorial video in the section below!",
       open: false
     },
     {
@@ -55,6 +56,9 @@ return (
       {faqs.map((faq, i) => (
         <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ}/>
       ))}
+      <div className='tutorial-video'>
+        <ReactPlayer url="https://www.youtube.com/watch?v=cYTJw-MwRa0"/>
+        </div>
     </div>
   </div>
   );
