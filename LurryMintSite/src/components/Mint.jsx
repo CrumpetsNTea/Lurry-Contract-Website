@@ -178,13 +178,10 @@ const renderMintButton = () => {
     <div className="mint-count">
       <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
     </div>
-<<<<<<< HEAD
     </div>
   </div>
 
-=======
     </>
->>>>>>> origin/component/faq
 
   );
 };
