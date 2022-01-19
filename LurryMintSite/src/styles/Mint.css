@@ -1,6 +1,12 @@
 body {
-  background-color: #1F4451;
+  background-color: #1f4451;
+}
 
+.MintPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-box {
@@ -15,11 +21,9 @@ body {
   justify-content: center;
   align-items: center;
   align-self: center;
-  position:relative ;
   height: 80%;
   width: 80%;
   z-index: -1;
-
 }
 
 .mint-button-flexbox {
@@ -29,9 +33,6 @@ body {
   position: relative;
   right: 22vw;
   top: 1rem;
-
-
-
 }
 
 .mint-button-container {
@@ -41,31 +42,32 @@ body {
 .mint-button {
   width: 15vmin;
   height: 4vmin;
-  background: #F4D12D;
+  background: #f4d12d;
   border: none;
   border-radius: 20rem;
-  
+
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 2.3vmin;
   text-align: center;
-  
+
   color: #000000;
-  
+
   float: right;
   box-shadow: 0rem 0.4rem black;
   cursor: pointer;
-  
-  }
+}
 
-    .mint-button:hover {background-color: #e8c529}
+.mint-button:hover {
+  background-color: #e8c529;
+}
 
-          .mint-button:active {
-              background-color: #debc26;
-                box-shadow: 0 0.1rem #666;
-                  transform: translateY(0.2rem);
-          }
+.mint-button:active {
+  background-color: #debc26;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.2rem);
+}
 
 .no-flexbox {
   display: flex;
@@ -86,67 +88,85 @@ body {
   background: grey;
   border: none;
   border-radius: 20rem;
-  
+
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 2.3vmin;
   text-align: center;
-  
+
   color: rgb(91, 91, 91);
-  
+
   float: right;
-  cursor:default;
-  }
+  cursor: default;
+}
 
 .connect-wallet-container {
   position: relative;
   z-index: 1;
   right: 22vw;
   top: 1rem;
-
 }
 
 .connect-wallet-button {
-width: 15vw;
-height: 6vh;
-background: #F4D12D;
-border: none;
-border-radius: 20rem;
+  width: clamp(0.5rem, 12vw, 25rem);
+  height: 6vh;
+  background: #f4d12d;
+  border: none;
+  border-radius: 20rem;
 
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-font-size: 1.37vw;
-text-align: center;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: clamp(0.5rem, 1vw, 2rem);
+  text-align: center;
 
-color: #000000;
+  color: #000000;
 
-float: right;
-box-shadow: 0rem 0.4rem black;
-cursor: pointer;
-
+  float: right;
+  box-shadow: 0rem 0.4rem black;
+  cursor: pointer;
 }
 
-        .connect-wallet-button:hover {background-color: #e8c529}
+.connect-wallet-button:hover {
+  background-color: #e8c529;
+}
 
-                  .connect-wallet-button:active {
-                    background-color: #debc26;
-                      box-shadow: 0 0.1rem #666;
-                        transform: translateY(0.2rem);
-                  }
-
-.mint-count-container {
-display: flex;
-position:relative ;
-justify-content: center;
-padding-top: 2rem;
-margin: 0rem;
-bottom: 12rem;
+.connect-wallet-button:active {
+  background-color: #debc26;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.2rem);
 }
 
 .mint-count {
-  font-family: 'Callie Chalk Font', sans-serif;
-  font-size: 1.5vmax;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-family: "Callie Chalk Font", sans-serif;
+  width: 80%;
+  padding-bottom: 2rem;
+  font-size: clamp(0.5rem, 2vw, 2rem);
 }
 
+@media screen and (max-width: 1200px) {
+  .connect-wallet-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0.5rem;
+    width: clamp(0.5rem, 12vw, 8rem);
+    font-size: clamp(0.5rem, 0.9vw, 2rem);
+    height: 2rem;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .connect-wallet-button {
+    display: none;
+  }
+
+  .welcome-box {
+    padding-left: 0;
+  }
+}
