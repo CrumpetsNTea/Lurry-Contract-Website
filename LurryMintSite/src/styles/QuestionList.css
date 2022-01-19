@@ -90,6 +90,10 @@
 }
 
 .tutorial-video {
-  padding-left: 2.8vw;
+display: flex;
+align-items: center;
+align-self: center;
+align-content: center;
+justify-content: center;
 }
 
