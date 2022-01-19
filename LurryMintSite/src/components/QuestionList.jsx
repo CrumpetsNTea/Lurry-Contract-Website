@@ -20,11 +20,6 @@ function QuestionList() {
       open: false
     },
     {
-      question: "How can I mint an NFT?",
-      answer: "Connect with metamask and click 'Approve' to mint a Floatie Lurry. For a demonstration, check out our step-by-step tutorial video in the section below!",
-      open: false
-    },
-    {
       question: "What can I do with my Floatie Lurry?",
       answer: "Absolutely anything you want! Post-mint, as long as the NFT remains in your wallet, you are free to use it in any way you wish!",
       open: false
@@ -32,6 +27,11 @@ function QuestionList() {
     {
       question: "How do can I access the Secret Lurry Society discord?",
       answer: "To access the discord, simply click on the discord social icon (located in the top, right corner) and authenticate yourself using your MetaMask account once prompted.",
+      open: false
+    },
+    {
+      question: "How can I mint a Floatie Lurry NFT?",
+      answer: "Connect with metamask and approve the transaction when prompted to mint a Floatie Lurry. For a demonstration, check out our step-by-step tutorial video below!",
       open: false
     }
   ]);

@@ -41,7 +41,7 @@ body {
 
 .mint-button {
   width: 15vmin;
-  height: 4vmin;
+  height: 7vmin;
   background: #F4D12D;
   border: none;
   border-radius: 20rem;
@@ -49,7 +49,7 @@ body {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.3vmin;
+  font-size: 3vmin;
   text-align: center;
   
   color: #000000;
