@@ -144,7 +144,6 @@ body {
   justify-content: center;
   font-family: "Callie Chalk Font", sans-serif;
   width: 80%;
-  padding-bottom: 2rem;
   font-size: clamp(0.5rem, 2vw, 2rem);
 }
 
@@ -162,6 +161,10 @@ body {
   }
 }
 
+.connect-button-sm {
+  display: none;
+}
+
 @media screen and (max-width: 625px) {
   .connect-wallet-button {
     display: none;
@@ -169,5 +172,37 @@ body {
 
   .welcome-box {
     padding-left: 0;
+  }
+
+  .connect-button-sm {
+    display: block;
+    width: 10rem;
+    height: 4rem;
+    background: #f4d12d;
+    border: none;
+    border-radius: 20rem;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+
+    color: #000000;
+
+    float: right;
+    box-shadow: 0rem 0.4rem black;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .mint-count {
+    position: relative;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

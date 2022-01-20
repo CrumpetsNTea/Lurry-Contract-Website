@@ -1,7 +1,6 @@
 /* Styles for TeamListItem components */
 /* import poppins from google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
   box-sizing: border-box;
@@ -20,23 +19,21 @@
 /* targets the headshots  */
 
 .card-image {
-  width:200px;
-  height:200px;
- border-radius: 150px;
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
 }
 
-
-.card-title, .card-description {
+.card-title,
+.card-description {
   font-family: "Poppins", sans-serif;
   margin: 2rem;
   color: white;
 }
 
-
 .card-title {
   font-size: 20px;
 }
-
 
 .team-cards {
   display: flex;
@@ -46,4 +43,9 @@
   margin: 80px 200px 25px 200px;
 }
 
-
+@media screen and (max-width: 750px) {
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+  }
+}

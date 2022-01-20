@@ -192,6 +192,10 @@
 }
 
 @media screen and (max-width: 720px) {
+  .roadmap {
+    height: 60rem;
+  }
+
   .roadmap-description-header {
     font-size: clamp(2rem, 2.5vw, 3rem);
   }

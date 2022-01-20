@@ -156,6 +156,12 @@ const MintPage = () => {
     </div>
   );
 
+  const renderNotConnectedContainerSm = () => (
+    <button onClick={connectWallet} className="connect-button-sm">
+      Connect Wallet
+    </button>
+  );
+
   const renderMintButton = () => {
     if (currentMintCount < 12) {
       return (
@@ -192,6 +198,9 @@ const MintPage = () => {
             : renderMintButton()}
         </div>
         <div className="mint-count">
+          {currentAccount === ""
+            ? renderNotConnectedContainerSm()
+            : renderMintButton()}
           <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
         </div>
       </div>
