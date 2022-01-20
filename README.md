@@ -8,3 +8,4 @@ The Secret Lurry Society is an end-to-end NFT project running on the Rinkeby Eth
 Every time you run npx hardhat run scripts/deploy.js --network rinkeby in your terminal - make sure to update the CONTRACT_ADDRESS in Mint.jsx for the website
 
 ## **Screenshots**
+
