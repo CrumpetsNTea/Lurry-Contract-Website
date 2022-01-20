@@ -34,10 +34,12 @@ const MintPage = () => {
     }
   };
 
+  // Check wallet connection on page render
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []);
 
+  // Get latest Lurry id for mint counter on page render
   useEffect(() => {
     getLurryId();
   }, []);
@@ -94,6 +96,7 @@ const MintPage = () => {
     document.body.appendChild(el);
   };
 
+  //  Function that interacts with the contract and calls the minting function inside the contract file
   const askContractToMintNft = async () => {
     const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
 
@@ -147,7 +150,7 @@ const MintPage = () => {
     }
   };
 
-  // Render Methods
+  // Connect wallet container for conditional if wallet is not connected already
   const renderNotConnectedContainer = () => (
     <div className="connect-wallet-container">
       <button onClick={connectWallet} className="connect-wallet-button">
@@ -156,22 +159,41 @@ const MintPage = () => {
     </div>
   );
 
+  const renderMintButton = () => {
+    if (currentMintCount < 12) {
+      return (
+        <div className="connect-wallet-container">
+          <button
+            onClick={askContractToMintNft}
+            className="connect-wallet-button"
+          >
+            Mint!
+          </button>
+        </div>
+      );
+    } else {
+      return (
+        <div className="no-flexbox">
+          <div className="no-container">
+            <p className="no-button">Collection Sold Out</p>
+          </div>
+        </div>
+      );
+    }
+  };
+
   const renderNotConnectedContainerSm = () => (
     <button onClick={connectWallet} className="connect-button-sm">
       Connect Wallet
     </button>
   );
 
-  const renderMintButton = () => {
+  const renderMintButtonSm = () => {
     if (currentMintCount < 12) {
       return (
-        <div className="mint-button-flexbox">
-          <div className="mint-button-container">
-            <button onClick={askContractToMintNft} className="mint-button">
-              Mint!
-            </button>
-          </div>
-        </div>
+        <button onClick={askContractToMintNft} className="connect-button-sm">
+          Mint!
+        </button>
       );
     } else {
       return (
@@ -200,7 +222,7 @@ const MintPage = () => {
         <div className="mint-count">
           {currentAccount === ""
             ? renderNotConnectedContainerSm()
-            : renderMintButton()}
+            : renderMintButtonSm()}
           <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
         </div>
       </div>
