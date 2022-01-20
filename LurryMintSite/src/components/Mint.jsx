@@ -179,21 +179,23 @@ const MintPage = () => {
   };
 
   return (
-    <div className="MintPage">
-      <div className="welcome-box">
-        <img
-          className="Lurry-and-Info"
-          src="https://gateway.pinata.cloud/ipfs/QmQedLnhM1CPetDQLMtb1Td91kAfK6VyG1NtWuCRJuwyVJ?preview=1"
-          alt="LURRY"
-        ></img>
-        {currentAccount === ""
-          ? renderNotConnectedContainer()
-          : renderMintButton()}
+    <>
+      <div className="MintPage">
+        <div className="welcome-box">
+          <img
+            className="Lurry-and-Info"
+            src="https://gateway.pinata.cloud/ipfs/QmQedLnhM1CPetDQLMtb1Td91kAfK6VyG1NtWuCRJuwyVJ?preview=1"
+            alt="LURRY"
+          ></img>
+          {currentAccount === ""
+            ? renderNotConnectedContainer()
+            : renderMintButton()}
+        </div>
+        <div className="mint-count">
+          <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
+        </div>
       </div>
-      <div className="mint-count">
-        <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
-      </div>
-    </div>
+    </>
   );
 };
 

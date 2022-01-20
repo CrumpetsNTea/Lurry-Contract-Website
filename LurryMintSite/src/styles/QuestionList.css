@@ -1,0 +1,91 @@
+/* Contains styles for FAQ section of Questions page  */
+
+@font-face {
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+  font-family: Raleway-regular;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* targets FAQ header + q/a's */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  padding: 100px 35px 200px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Raleway-regular", sans-serif;
+}
+
+.faqs {
+  width: 100%;
+  max-width: 768px;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.faqs .faq {
+  margin: 15px;
+  height: 80x;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 4px black;
+}
+
+.faq-question,
+.faq-answer {
+  color: black;
+}
+
+.faqs .faq .faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question {
+  position: relative;
+  font-size: 20px;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq.open .faq-question {
+  margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.tutorial-video {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 8rem;
+}

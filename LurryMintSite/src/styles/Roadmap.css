@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #efe19d;
+  background-color: #1f4451;
   height: 75rem;
 }
 
@@ -24,9 +24,9 @@
   justify-content: center;
   width: 90%;
   background-color: #fdfdfe;
-  border-radius: 40px;
   padding: 2rem;
   height: 20rem;
+  border-radius: 20px;
 }
 
 .roadmap-description-header {
@@ -41,7 +41,6 @@
   align-items: center;
   width: 90%;
   background-color: black;
-  border-radius: 40px;
   padding: 2rem;
   height: 40rem;
 }

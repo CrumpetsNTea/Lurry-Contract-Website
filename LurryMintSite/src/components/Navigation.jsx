@@ -50,21 +50,21 @@ export default function Navigation() {
           </ul>
         )}
         {menuType === 1 && (
-          <ul className="phones-excluded nav-links">
-            <li>
-              <a href="About">About</a>
-            </li>
-            <li>
-              <a href="Roadmap">Roadmap</a>
-            </li>
-            <li>
-              <a href="Faq">FAQ</a>
-            </li>
-          </ul>
+          <>
+            <ul className="phones-excluded nav-links">
+              <li>
+                <a href="About">About</a>
+              </li>
+              <li>
+                <a href="Roadmap">Roadmap</a>
+              </li>
+              <li>
+                <a href="Faq">FAQ</a>
+              </li>
+            </ul>
+            <empty></empty>
+          </>
         )}
-        <a className="mint" href="#">
-          <button className="button">Connect Wallet</button>
-        </a>
       </div>
       {click && (
         <ul className="dropdown">

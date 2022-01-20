@@ -1,0 +1,46 @@
+
+/* import poppins from google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0a2630;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+
+.footer-info-left {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-info-right {
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.opensea-logo {
+  max-height: 50px;
+  max-width: 50px;
+  margin-left: 20px;
+}
+
+.left-side-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.twitter {
+  margin-right: 20px;
+}

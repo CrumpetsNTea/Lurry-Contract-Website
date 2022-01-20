@@ -116,11 +116,11 @@ export default function Roadmap() {
           <div className="roadmap-description-steps">
             <h4 className="description-steps">
               <span className="bold">Step 1: </span>
-              Launch Floatie Lurry Collection
+              Launch Floatie Lurry Collection ✅
             </h4>
             <h4 className="description-steps">
               <span className="bold">Step 2: </span>
-              Get listed on Secondary marketplaces
+              Get listed on Secondary marketplaces ⏳
             </h4>
             <h4 className="description-steps">
               <span className="bold">Step 3: </span>
