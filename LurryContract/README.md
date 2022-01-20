@@ -1,6 +1,9 @@
+## Welcome to the Smart Contract
+
 npm install to install dependencies (hardhat etc..)
 
 run.js runs the smart contract and tests to make sure it all works
+
 deploy.js deploys the smart contract and the collection on the blockchain
 
 Try running some of the following tasks:
