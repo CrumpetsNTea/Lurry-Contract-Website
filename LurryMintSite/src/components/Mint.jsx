@@ -5,14 +5,12 @@ import SecretLurrySociety from '../utils/SecretLurrySociety.json'
 import '../styles/Mint.css'
 
 
-
 const MintPage = () => {
   const [currentMintCount, setCurrentMintCount] = useState(0)
 
   const [currentAccount, setCurrentAccount] = useState("");
 
-  
-  // State variable to store user's public wallet address
+  // Checks to see if user's wallet is connected
   const checkIfWalletIsConnected = async () => {
     // First make sure we have access to window.ethereum
     const { ethereum } = window;
@@ -37,10 +35,12 @@ const MintPage = () => {
     }
   }
 
+  // Check wallet connection on page render
   useEffect(() => {
     checkIfWalletIsConnected();
   }, [])
 
+  // Get latest Lurry id for mint counter on page render
   useEffect(() => {
     getLurryId();
   }, [])
@@ -66,7 +66,7 @@ const MintPage = () => {
     }
   }
 
-
+  // Interacts with smart contract to get latest and greatest Lurry Id to update the mint counter on the website
   const getLurryId = async () => {
     const { ethereum } = window;
     const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
@@ -91,6 +91,8 @@ const MintPage = () => {
     document.body.appendChild(el);
    }
 
+
+  //  Function that interacts with the contract and calls the minting function inside the contract file
   const askContractToMintNft = async () => {
     const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
 
@@ -99,30 +101,38 @@ const MintPage = () => {
       return
     } else {
     try {
+      // Checks metamask connection
       const { ethereum } = window;
-
+      // If connection  is true
       if (ethereum) {
+        // set necessary information for connected with the contract
         const provider = new ethers.providers.Web3Provider(ethereum);
+        // Signer = user who is requesting transaction to mint
         const signer = provider.getSigner();
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, SecretLurrySociety.abi, signer);
         
 
         console.log("Going to pop wallet now to pay gas...")
+        // Calls the mint function in the smart contract
         let nftTxn = await connectedContract.mintALurry();
 
         console.log("Mining...please wait.")
+        // let user know NFT is minting
         tempAlert("Mining your NFT... please wait.", 18000);
         await nftTxn.wait();
 
- 
-
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        // Let user know minting was successful
         alert(`Mint Successful! Clicking okay will redirect you to the etherscan transaction to confirm the mint.`);
+        
+        // Get latest Lurry id and update mint counter
         connectedContract.getCurrentLurryId()
         .then(function(result){
           console.log(result.toNumber())
           setCurrentMintCount(result.toNumber())
         })  
+
+        // Open new tab for user to see successful transaction on alert close
         window.open(`https://rinkeby.etherscan.io/tx/${nftTxn.hash}`, '_blank') || window.location.replace('https://rinkeby.etherscan.io/tx/${nftTxn.hash');
       } else {
         console.log("Ethereum object doesn't exist!")
@@ -134,7 +144,7 @@ const MintPage = () => {
   }
 }
 
-  // Render Methods
+  // Connect wallet container for conditional if wallet is not connected already
   const renderNotConnectedContainer = () => (
     <div className="connect-wallet-container">
     <button onClick={connectWallet} className="connect-wallet-button">
@@ -143,6 +153,7 @@ const MintPage = () => {
     </div>
   );
 
+  // Mint button / collection sold out conditional
 const renderMintButton = () => {
   if (currentMintCount < 12) {
     return (
@@ -165,7 +176,7 @@ const renderMintButton = () => {
   }
 }
 
-
+// Final return for Mint component
   return (
     <>
     <div className="MintPage">
