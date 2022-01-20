@@ -1,4 +1,4 @@
-## What the heck is Hardhat and Ethers.js? 😐
+## WTF is Hardhat and Ethers.js? 😐
  
 In building the NFT Smart Contract for this project, we made use of two excellent tools for Smart Contract development, Hardhat environment and EtherJS library. This documentation will cover what they are and how they are used.
 
