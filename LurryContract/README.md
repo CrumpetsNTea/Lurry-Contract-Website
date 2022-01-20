@@ -16,5 +16,5 @@ to deploy on Rinkeby:
 ```shell
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
-Every time you run deploy - make sure to update the CONTRACT_ADDRESS in App.js for the website
+Every time you run deploy.js - make sure to update the CONTRACT_ADDRESS in Mint.jsx for the website
 
