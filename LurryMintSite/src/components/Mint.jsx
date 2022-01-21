@@ -208,7 +208,7 @@ const MintPage = () => {
 
   return (
     <>
-      <div className="MintPage">
+      <div className="MintPage" id="Mint">
         <div className="welcome-box">
           <img
             className="Lurry-and-Info"

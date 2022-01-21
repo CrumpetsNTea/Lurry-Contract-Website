@@ -28,7 +28,7 @@ export default function Roadmap() {
   };
 
   return (
-    <section className="roadmap">
+    <section className="roadmap" id="Roadmap">
       <ul className="lurry-container">
         <button onClick={decreaseSlide} className="carousel-arrow">
           <img

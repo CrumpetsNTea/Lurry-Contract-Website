@@ -49,7 +49,7 @@ function QuestionList() {
   }
 
 return (
-  <div className="faq-container">
+  <div className="faq-container" id='FAQ'>
 
     <h1>FAQs</h1>
     <div className="faqs">
