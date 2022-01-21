@@ -1,8 +1,14 @@
 body {
+  background-image: url('https://gateway.pinata.cloud/ipfs/QmUYpwgWN5su7AKN7tLhNEqj6cALdZDE57sGQHBF4DEumw?preview=1');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   background-color: #1f4451;
 }
 
 .MintPage {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
