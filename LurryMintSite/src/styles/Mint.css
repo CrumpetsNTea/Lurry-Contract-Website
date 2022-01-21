@@ -118,7 +118,7 @@ body {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: clamp(0.5rem, 1vw, 2rem);
+  font-size: clamp(1.5rem, 1vw, 2rem);
   text-align: center;
 
   color: #000000;
@@ -155,7 +155,7 @@ body {
     position: relative;
     bottom: 0.5rem;
     width: clamp(0.5rem, 12vw, 8rem);
-    font-size: clamp(0.5rem, 0.9vw, 2rem);
+    font-size: clamp(1rem, 0.9vw, 2rem);
     height: 2rem;
     border-radius: 20px;
   }
