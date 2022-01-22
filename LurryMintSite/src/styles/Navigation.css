@@ -32,13 +32,12 @@ button {
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  background: #aaffec;
+  /* background: #aaffec; */
   padding: 0 45px 0 45px;
   /* box-shadow: 0 0 8px 0 #173641; */
 }
 
 .navbar > .logo {
-  margin: 1rem;
   color: black;
 }
 

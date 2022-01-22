@@ -36,7 +36,7 @@ export default function Navigation() {
     <>
       <div className="navbar">
         <img
-          src="/images/SLSlogo.png"
+          src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
           alt="Secret Lurry Society Logo"
           className="logo"
         />
