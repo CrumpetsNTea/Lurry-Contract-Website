@@ -13,9 +13,13 @@ const App = () => {
       <Navigation />
       <MintPage />
       <Roadmap />
+      <div className="FAQ-section">
       <QuestionList />
       <TeamList />
+      </div>
+
       <Footer />
+
     </>
   );
 };

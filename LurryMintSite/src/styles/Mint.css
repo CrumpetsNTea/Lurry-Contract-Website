@@ -1,18 +1,17 @@
-body {
-  background-image: url('https://gateway.pinata.cloud/ipfs/QmUYpwgWN5su7AKN7tLhNEqj6cALdZDE57sGQHBF4DEumw?preview=1');
-  background-size: contain;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
 
-  background-color: #1f4451;
-}
+/* body {
+  background: url('https://gateway.pinata.cloud/ipfs/QmXamzsuqfqeRzWhboMT9vJrXHDstZmUXHYJuPZ3h13tJR?preview=1') no-repeat; 
+  background-size: 100%;
+} */
 
 .MintPage {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url('https://gateway.pinata.cloud/ipfs/QmeWnafamGkRjUg73JDz65KHztmhAgdAcksqgsHrF5LsfZ?preview=1') no-repeat scroll; 
+  background-size: 101.5%;
+  padding-top: 15rem;
 }
 
 .welcome-box {
@@ -29,7 +28,8 @@ body {
   align-self: center;
   height: 80%;
   width: 80%;
-  z-index: -1;
+  /* padding-top: 15rem; */
+  /* z-index: -1; */
 }
 
 .mint-button-flexbox {

@@ -1,12 +1,24 @@
-
 .App {
   height: 100vh;
   background-color: #0d1116;
   overflow: scroll;
   text-align: center;
-
 }
 
+.FAQ-section {
+  background: url('https://gateway.pinata.cloud/ipfs/QmemMPQ1HShDNMWas2LqPuukkt1YgWuDVJWH3juocGwunk?preview=1') no-repeat scroll;
+  background-size: 99.3% 100%;
+  background-color: rgb(11, 38, 34);
+}
+
+/* body {
+  
+  background-image: url('https://gateway.pinata.cloud/ipfs/QmUYpwgWN5su7AKN7tLhNEqj6cALdZDE57sGQHBF4DEumw?preview=1');
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-color: rgb(29, 48, 58);
+} */
 
 .container {
   height: 100%;

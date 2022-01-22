@@ -208,8 +208,8 @@ const MintPage = () => {
 
   return (
     <>
-      <div className="MintPage" id="Mint">
-        <div className="welcome-box">
+      <div className="MintPage" >
+        <div className="welcome-box" id="Mint">
           <img
             className="Lurry-and-Info"
             src="https://gateway.pinata.cloud/ipfs/QmNf88maS17CbwkjuN4vEfaSjWqYVKegnkow7itks8iqjs?preview=1"
