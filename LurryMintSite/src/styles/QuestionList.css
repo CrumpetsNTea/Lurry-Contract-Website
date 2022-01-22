@@ -6,6 +6,7 @@
 }
 
 * {
+  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -88,4 +89,7 @@
   align-content: center;
   justify-content: center;
   margin-top: 8rem;
+}
+div.faq {
+  border-radius: 1rem;
 }

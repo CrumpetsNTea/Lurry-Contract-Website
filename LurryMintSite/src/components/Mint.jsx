@@ -69,7 +69,7 @@ const MintPage = () => {
 
   const getLurryId = async () => {
     const { ethereum } = window;
-    const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
+    const CONTRACT_ADDRESS = "0xd54E1B236930fDD61dDF0a4CD868Dc579DC7CB22";
     const provider = new ethers.providers.Web3Provider(ethereum);
     const connectedContract = new ethers.Contract(
       CONTRACT_ADDRESS,
@@ -98,7 +98,7 @@ const MintPage = () => {
 
   //  Function that interacts with the contract and calls the minting function inside the contract file
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
+    const CONTRACT_ADDRESS = "0xd54E1B236930fDD61dDF0a4CD868Dc579DC7CB22";
 
     if (currentMintCount >= 12) {
       alert("All Lurry's have been minted! Sorry!");
@@ -208,11 +208,11 @@ const MintPage = () => {
 
   return (
     <>
-      <div className="MintPage">
+      <div className="MintPage" id="Mint">
         <div className="welcome-box">
           <img
             className="Lurry-and-Info"
-            src="https://gateway.pinata.cloud/ipfs/QmQedLnhM1CPetDQLMtb1Td91kAfK6VyG1NtWuCRJuwyVJ?preview=1"
+            src="https://gateway.pinata.cloud/ipfs/QmQnoTrDMdqEfK5rESALU7nZKkoMgVaPJt1iaDowJPKByB?preview=1"
             alt="LURRY"
           ></img>
           {currentAccount === ""

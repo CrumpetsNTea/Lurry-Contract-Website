@@ -1,7 +1,6 @@
-import { zeroPad } from "@ethersproject/bytes";
 import React, { useState, useEffect } from "react";
 import "../styles/Navigation.css";
-import MintPage from "./Mint";
+import {Link} from 'react-scroll'
 
 export default function Navigation() {
   const [click, setClick] = useState(false);
@@ -31,11 +30,13 @@ export default function Navigation() {
     });
   });
 
+
+
   return (
     <>
       <div className="navbar">
         <img
-          src="/images/SLSlogo.png"
+          src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
           alt="Secret Lurry Society Logo"
           className="logo"
         />
@@ -53,13 +54,13 @@ export default function Navigation() {
           <>
             <ul className="phones-excluded nav-links">
               <li>
-                <a href="About">About</a>
+                <Link to='Mint' spy={true} smooth={true} >Mint</Link>
               </li>
               <li>
-                <a href="Roadmap">Roadmap</a>
+               <Link to='Roadmap' spy={true} smooth={true}>Roadmap</Link>
               </li>
               <li>
-                <a href="Faq">FAQ</a>
+                <Link to='FAQ' spy={true} smooth={true}>FAQ</Link>
               </li>
             </ul>
             <a></a>
@@ -69,13 +70,13 @@ export default function Navigation() {
       {click && (
         <ul className="dropdown">
           <li>
-            <a href="About">About</a>
+          <Link to='Mint' spy={true} smooth={true} >Mint</Link>
           </li>
           <li>
-            <a href="Roadmap">Roadmap</a>
+          <Link to='Roadmap' spy={true} smooth={true}>Roadmap</Link>
           </li>
           <li>
-            <a href="Faq">FAQ</a>
+          <Link to='FAQ' spy={true} smooth={true}>FAQ</Link>
           </li>
         </ul>
       )}

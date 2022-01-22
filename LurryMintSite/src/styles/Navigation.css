@@ -15,8 +15,10 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 16px;
-  color: #edf0f1;
+  color: black;
   text-decoration: none;
+  cursor: pointer;
+
 }
 
 button {
@@ -30,20 +32,18 @@ button {
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  background: #0c303d;
+  /* background: #aaffec; */
   padding: 0 45px 0 45px;
-  box-shadow: 0 0 8px 0 #173641;
+  /* box-shadow: 0 0 8px 0 #173641; */
 }
 
 .navbar > .logo {
-  margin: 1rem;
-  color: white;
+  color: black;
 }
 
 .logo {
   max-width: 120%;
   max-height: 120%;
-  cursor: pointer;
 }
 
 .nav-links {
@@ -56,6 +56,7 @@ button {
   display: inline-block;
   padding: 0px 20px;
   letter-spacing: 1px;
+  padding-right: 6rem;
 }
 
 .nav-links li a {
