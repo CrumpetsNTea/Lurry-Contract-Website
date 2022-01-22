@@ -9,15 +9,11 @@
 }
 
 .roadmap {
-  /* background-image: url('https://gateway.pinata.cloud/ipfs/QmUYpwgWN5su7AKN7tLhNEqj6cALdZDE57sGQHBF4DEumw?preview=1');
-  background-size: contain;
-  background-repeat: repeat-y; */
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  /* background-color: #8cf0fe; */
   height: 75rem;
 }
 
