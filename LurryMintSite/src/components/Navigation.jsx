@@ -62,7 +62,7 @@ export default function Navigation() {
                 <a href="Faq">FAQ</a>
               </li>
             </ul>
-            <empty></empty>
+            <a></a>
           </>
         )}
       </div>
