@@ -28,7 +28,7 @@ export default function Roadmap() {
   };
 
   return (
-    <section className="roadmap" id="Roadmap">
+    <section className="roadmap">
       <ul className="lurry-container">
         <button onClick={decreaseSlide} className="carousel-arrow">
           <img
@@ -110,7 +110,7 @@ export default function Roadmap() {
         </button>
       </ul>
 
-      <div className="roadmap-description">
+      <div className="roadmap-description" id="Roadmap">
         <div className="roadmap-description-info">
           <h1 className="roadmap-description-header">ROADMAP & UTILITY</h1>
           <div className="roadmap-description-steps">
@@ -124,9 +124,8 @@ export default function Roadmap() {
             </h4>
             <h4 className="description-steps">
               <span className="bold">Step 3: </span>
-              Marketing - setup Discord, Telegram,
+              Marketing - implement Discord Token transfers for services and merch
               <br className="phones-only" />
-              Reddit and Twitter channels
             </h4>
           </div>
         </div>
