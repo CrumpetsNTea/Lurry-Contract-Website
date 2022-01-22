@@ -12,9 +12,11 @@ const App = () => {
     <>
       <Navigation />
       <MintPage />
+      <div className="Roadmap-to-Team">
       <Roadmap />
       <QuestionList />
       <TeamList />
+      </div>
       <Footer />
     </>
   );
