@@ -55,7 +55,7 @@ export default function LandingPage() {
             src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
           ></img>
           <button id="buy-button" className="buy-button">
-            <Link to="Mint" spy={true} smooth={true}>
+            <Link to="mint-page" spy={true} smooth={true} offset={1000}>
               Buy A Lurry
             </Link>
           </button>

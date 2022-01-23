@@ -39,7 +39,7 @@ export default function Navigation() {
 
   window.addEventListener("scroll", () => {
     const nav = document.getElementById("navbar");
-    if (window.scrollY > 4500) {
+    if (window.scrollY > 3200) {
       nav.style.display = "flex";
       return;
     }
@@ -68,7 +68,7 @@ export default function Navigation() {
           <>
             <ul className="phones-excluded nav-links">
               <li>
-                <Link to="Mint" spy={true} smooth={true}>
+                <Link to="mint-page" spy={true} smooth={true}>
                   Mint
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export default function Navigation() {
       {click && (
         <ul className="dropdown">
           <li>
-            <Link to="Mint" spy={true} smooth={true}>
+            <Link to="mint-page" spy={true} smooth={true}>
               Mint
             </Link>
           </li>
