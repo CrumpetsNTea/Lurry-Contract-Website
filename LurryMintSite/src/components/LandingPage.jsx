@@ -26,7 +26,7 @@ export default function LandingPage() {
       buyButton.style.display = "flex";
     } else if (value > 800) {
       lurrySea.style.top = (value - 700) * -1 + "px";
-      logoContainer.style.top = (value - 900) * -0.2 + "px";
+      logoContainer.style.top = (value - 1100) * -0.2 + "px";
     }
     if (value > 1100) {
       buyButton.style.display = "none";
