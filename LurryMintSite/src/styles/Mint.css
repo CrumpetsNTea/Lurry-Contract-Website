@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+body {
+  
+  background: rgb(140,240,254);
+  background-image: url('https://gateway.pinata.cloud/ipfs/QmcGpN8SGMmXK9bunGVAnYsKdr5foXn1shb1zKacm4PwSv?preview=1');
+  background-size: 112%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+
+>>>>>>> 796e83c7a6623095b0586162373aed4e858940a9
 .MintPage {
   display: flex;
   flex-direction: column;
