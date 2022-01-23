@@ -1,9 +1,3 @@
-body {
-  background-size: 112%;
-  background-repeat: no-repeat;
-  /* background-attachment: scroll; */
-}
-
 .MintPage {
   display: flex;
   flex-direction: column;

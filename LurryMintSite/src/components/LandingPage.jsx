@@ -15,6 +15,7 @@ export default function LandingPage() {
     const rightCloud = document.getElementById("right-cloud");
     const lurrySea = document.getElementById("lurry-sea");
     const buyButton = document.getElementById("buy-button");
+    const logoContainer = document.getElementById("logo-container");
     const value = window.scrollY;
 
     if (value < 800) {
@@ -24,7 +25,8 @@ export default function LandingPage() {
       rightCloud.style.right = value * -1 + "px";
       buyButton.style.display = "flex";
     } else if (value > 800) {
-      lurrySea.style.top = (value - 1200) * -1 + "px";
+      lurrySea.style.top = (value - 700) * -1 + "px";
+      logoContainer.style.top = (value - 900) * -0.2 + "px";
     }
     if (value > 1100) {
       buyButton.style.display = "none";
@@ -34,23 +36,34 @@ export default function LandingPage() {
   });
 
   return (
-    <section className="landing-page">
-      <div className="clouds-and-sun">
-        <img id="left-cloud" className="clouds" src={leftCloud}></img>
-        <img
-          id="sun"
-          className="lurry-sun"
-          src={lurrySun}
-          alt="Lurry sun"
-        ></img>
-        <img id="right-cloud" className="clouds" src={rightCloud}></img>
+    <section className="filler">
+      <div className="landing-page">
+        <div className="clouds-and-sun">
+          <img id="left-cloud" className="clouds" src={leftCloud}></img>
+          <img
+            id="sun"
+            className="lurry-sun"
+            src={lurrySun}
+            alt="Lurry sun"
+          ></img>
+          <img id="right-cloud" className="clouds" src={rightCloud}></img>
+        </div>
+        <div id="logo-container" className="logo-container">
+          <img
+            id="logo"
+            className="logo-landing"
+            src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
+          ></img>
+          <button id="buy-button" className="buy-button">
+            <Link to="Mint" spy={true} smooth={true}>
+              Buy A Lurry
+            </Link>
+          </button>
+        </div>
       </div>
-      <button id="buy-button" className="buy-button">
-        <Link to="Mint" spy={true} smooth={true}>
-          Buy A Lurry
-        </Link>
-      </button>
-      <img id="lurry-sea" className="lurry-sea" src={lurrySea}></img>
+      <div id="lurry-sea">
+        <img className="lurry-sea" src={lurrySea}></img>
+      </div>
     </section>
   );
 }

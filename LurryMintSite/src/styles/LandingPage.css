@@ -1,28 +1,28 @@
 .landing-page {
-  height: 70rem;
+  height: 40rem;
   background-color: rgb(170, 255, 236);
 }
 
 .lurry-sun {
   position: absolute;
-  width: 35rem;
-  right: 32rem;
+  width: clamp(10rem, 20vw, 30rem);
+  right: 20%;
   top: 0rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .clouds-and-sun {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   width: 100%;
 }
 
 .clouds {
-  position: absolute;
+  position: relative;
   object-fit: contain;
   top: 0;
-  width: 50rem;
+  width: clamp(10rem, 30vw, 50rem);
   z-index: 2;
 }
 
@@ -32,7 +32,7 @@
 
 .lurry-sea {
   position: relative;
-  top: 32rem;
+  bottom: 8rem;
   object-fit: contain;
   width: 100%;
   z-index: 1;
@@ -42,11 +42,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: 45%;
-  top: 6%;
-  width: 15vmin;
-  height: 4vmin;
+  position: relative;
+  width: 12rem;
+  height: 3rem;
   background: #f4d12d;
   border: none;
   border-radius: 20rem;
@@ -78,9 +76,39 @@
   transform: translateY(0.2rem);
 }
 
+.filler {
+  background-color: rgb(140, 240, 254);
+}
+
+.logo-container {
+  position: relative;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-landing {
+  width: clamp(10rem, 13vw, 20rem);
+  z-index: 2;
+}
+
+#lurry-sea {
+  position: relative;
+  background-color: rgb(140, 240, 254);
+  height: 40rem;
+}
+
 @keyframes bounce {
   to {
     box-shadow: 0 0.1rem #666;
     transform: translateY(0.2rem);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .logo-container {
+    top: 20%;
   }
 }

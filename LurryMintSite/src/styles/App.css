@@ -1,15 +1,21 @@
-
 .App {
   height: 100vh;
   background-color: #0d1116;
   overflow: scroll;
   text-align: center;
   background-color: #8cf0fe;
-
 }
 
 .Roadmap-to-Team {
-  background: linear-gradient(rgba(140,240,254,1) 25%, rgba(58,137,148,1) 58%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(
+    rgba(140, 240, 254, 1) 25%,
+    rgba(58, 137, 148, 1) 58%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
