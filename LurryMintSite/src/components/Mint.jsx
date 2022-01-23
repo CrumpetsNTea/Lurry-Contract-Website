@@ -212,7 +212,7 @@ const MintPage = () => {
         <div className="welcome-box">
           <img
             className="Lurry-and-Info"
-            src="https://gateway.pinata.cloud/ipfs/QmQedLnhM1CPetDQLMtb1Td91kAfK6VyG1NtWuCRJuwyVJ?preview=1"
+            src="https://gateway.pinata.cloud/ipfs/QmQnoTrDMdqEfK5rESALU7nZKkoMgVaPJt1iaDowJPKByB?preview=1"
             alt="LURRY"
           ></img>
           {currentAccount === ""
