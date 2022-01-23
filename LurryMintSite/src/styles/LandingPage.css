@@ -1,0 +1,114 @@
+.landing-page {
+  height: 40rem;
+  background-color: rgb(170, 255, 236);
+}
+
+.lurry-sun {
+  position: absolute;
+  width: clamp(10rem, 20vw, 30rem);
+  right: 20%;
+  top: 0rem;
+  z-index: 2;
+}
+
+.clouds-and-sun {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.clouds {
+  position: relative;
+  object-fit: contain;
+  top: 0;
+  width: clamp(10rem, 30vw, 50rem);
+  z-index: 2;
+}
+
+#right-cloud {
+  right: 0;
+}
+
+.lurry-sea {
+  position: relative;
+  bottom: 8rem;
+  object-fit: contain;
+  width: 100%;
+  z-index: 1;
+}
+
+.buy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 12rem;
+  height: 3rem;
+  background: #f4d12d;
+  border: none;
+  border-radius: 20rem;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10vmin;
+  text-align: center;
+
+  color: #000000;
+
+  float: right;
+  box-shadow: 0rem 0.4rem black;
+  cursor: pointer;
+  z-index: 10;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.buy-button:hover {
+  background-color: #e8c529;
+}
+
+.buy-button:active {
+  background-color: #debc26;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.2rem);
+}
+
+.filler {
+  background-color: rgb(140, 240, 254);
+}
+
+.logo-container {
+  position: relative;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-landing {
+  width: clamp(10rem, 13vw, 20rem);
+  z-index: 2;
+}
+
+#lurry-sea {
+  position: relative;
+  background-color: rgb(140, 240, 254);
+  height: 40rem;
+}
+
+@keyframes bounce {
+  to {
+    box-shadow: 0 0.1rem #666;
+    transform: translateY(0.2rem);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .logo-container {
+    top: 20%;
+  }
+}

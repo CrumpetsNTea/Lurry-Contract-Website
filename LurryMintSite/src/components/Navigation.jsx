@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Navigation.css";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 
 export default function Navigation() {
   const [click, setClick] = useState(false);
@@ -30,11 +30,25 @@ export default function Navigation() {
     });
   });
 
+  useEffect(() => {
+    const nav = document.getElementById("navbar");
+    nav.style.display = "none";
+  }, []);
 
+  // document.getElementById("navbar").style.display = "none";
+
+  window.addEventListener("scroll", () => {
+    const nav = document.getElementById("navbar");
+    if (window.scrollY > 3200) {
+      nav.style.display = "flex";
+      return;
+    }
+    nav.style.display = "none";
+  });
 
   return (
     <>
-      <div className="navbar">
+      <div id="navbar" className="navbar">
         <img
           src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
           alt="Secret Lurry Society Logo"
@@ -54,29 +68,41 @@ export default function Navigation() {
           <>
             <ul className="phones-excluded nav-links">
               <li>
-                <Link to='Mint' spy={true} smooth={true} >Mint</Link>
+                <Link to="mint-page" spy={true} smooth={true}>
+                  Mint
+                </Link>
               </li>
               <li>
-               <Link to='Roadmap' spy={true} smooth={true}>Roadmap</Link>
+                <Link to="Roadmap" spy={true} smooth={true}>
+                  Roadmap
+                </Link>
               </li>
               <li>
-                <Link to='FAQ' spy={true} smooth={true}>FAQ</Link>
+                <Link to="FAQ" spy={true} smooth={true}>
+                  FAQ
+                </Link>
               </li>
             </ul>
-            <empty></empty>
+            <a></a>
           </>
         )}
       </div>
       {click && (
         <ul className="dropdown">
           <li>
-          <Link to='Mint' spy={true} smooth={true} >Mint</Link>
+            <Link to="mint-page" spy={true} smooth={true}>
+              Mint
+            </Link>
           </li>
           <li>
-          <Link to='Roadmap' spy={true} smooth={true}>Roadmap</Link>
+            <Link to="Roadmap" spy={true} smooth={true}>
+              Roadmap
+            </Link>
           </li>
           <li>
-          <Link to='FAQ' spy={true} smooth={true}>FAQ</Link>
+            <Link to="FAQ" spy={true} smooth={true}>
+              FAQ
+            </Link>
           </li>
         </ul>
       )}
