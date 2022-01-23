@@ -1,0 +1,86 @@
+.landing-page {
+  height: 70rem;
+  background-color: rgb(170, 255, 236);
+}
+
+.lurry-sun {
+  position: absolute;
+  width: 35rem;
+  right: 32rem;
+  top: 0rem;
+  z-index: 1;
+}
+
+.clouds-and-sun {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.clouds {
+  position: absolute;
+  object-fit: contain;
+  top: 0;
+  width: 50rem;
+  z-index: 2;
+}
+
+#right-cloud {
+  right: 0;
+}
+
+.lurry-sea {
+  position: relative;
+  top: 32rem;
+  object-fit: contain;
+  width: 100%;
+  z-index: 1;
+}
+
+.buy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 45%;
+  top: 6%;
+  width: 15vmin;
+  height: 4vmin;
+  background: #f4d12d;
+  border: none;
+  border-radius: 20rem;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10vmin;
+  text-align: center;
+
+  color: #000000;
+
+  float: right;
+  box-shadow: 0rem 0.4rem black;
+  cursor: pointer;
+  z-index: 10;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.buy-button:hover {
+  background-color: #e8c529;
+}
+
+.buy-button:active {
+  background-color: #debc26;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.2rem);
+}
+
+@keyframes bounce {
+  to {
+    box-shadow: 0 0.1rem #666;
+    transform: translateY(0.2rem);
+  }
+}
