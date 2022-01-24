@@ -39,7 +39,7 @@
 
 .mint-button {
   width: 15vmin;
-  height: 4vmin;
+  height: 2vmin;
   background: #f4d12d;
   border: none;
   border-radius: 20rem;
@@ -108,7 +108,7 @@
 
 .connect-wallet-button {
   width: clamp(1rem, 12vw, 25rem);
-  height: 7vh;
+  height: 5vmin;
   background: #f4d12d;
   border: none;
   border-radius: 20rem;

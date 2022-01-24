@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import Swal from "sweetalert2"
 
 import SecretLurrySociety from "../utils/SecretLurrySociety.json";
 import "../styles/Mint.css";
@@ -82,20 +83,6 @@ const MintPage = () => {
     });
   };
 
-  // Function for temporary alert message to let user know that their NFT is minting
-  const tempAlert = (msg, duration) => {
-    let el = document.createElement("div");
-    el.setAttribute(
-      "style",
-      "font-family: Raleway;font-style: normal;font-weight: bold;font-size: 2.3vw;position:absolute;top:30%;left:43%;background-color:white;width:20%;"
-    );
-    el.innerHTML = msg;
-    setTimeout(function () {
-      el.parentNode.removeChild(el);
-    }, duration);
-    document.body.appendChild(el);
-  };
-
   //  Function that interacts with the contract and calls the minting function inside the contract file
   const askContractToMintNft = async () => {
     const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
@@ -120,26 +107,44 @@ const MintPage = () => {
           let nftTxn = await connectedContract.mintALurry();
 
           console.log("Mining...please wait.");
-          tempAlert("Mining your NFT... please wait.", 18000);
+          let timerInterval
+          Swal.fire({
+            html: 'Mining your Lurry NFT, please wait....',
+            timer: 18000,
+            didOpen: () => {
+              Swal.showLoading()
+            },
+            willClose: () => {
+              clearInterval(timerInterval)
+            }
+          }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+              console.log('I was closed by the timer')
+            }
+          })          
           await nftTxn.wait();
 
           console.log(
             `Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
           );
-          alert(
-            `Mint Successful! Clicking okay will redirect you to the etherscan transaction to confirm the mint.`
-          );
+
+          Swal.fire({
+            icon: "success",
+            title: "Mint Successful!",
+            text: "Clicking OK will redirect you to the etherscan transaction receipt.",
+            type: "success"
+        }).then(function() {
+          window.open(
+                  `https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
+                )        
+              });
+
           connectedContract.getCurrentLurryId().then(function (result) {
             console.log(result.toNumber());
             setCurrentMintCount(result.toNumber());
           });
-          window.open(
-            `https://rinkeby.etherscan.io/tx/${nftTxn.hash}`,
-            "_blank"
-          ) ||
-            window.location.replace(
-              "https://rinkeby.etherscan.io/tx/${nftTxn.hash"
-            );
+
         } else {
           console.log("Ethereum object doesn't exist!");
         }

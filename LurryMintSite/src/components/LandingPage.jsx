@@ -60,7 +60,7 @@ export default function LandingPage() {
           ></img>
           <button id="buy-button" className="buy-button">
             <Link to="mint-page" spy={true} smooth={true} offset={800}>
-              Buy A Lurry
+              Go to Lurry Mint
             </Link>
           </button>
           <div className="lurrycoin-button-container">
