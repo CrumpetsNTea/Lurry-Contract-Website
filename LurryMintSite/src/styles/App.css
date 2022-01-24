@@ -3,15 +3,17 @@
   background-color: #0d1116;
   overflow: scroll;
   text-align: center;
-  background-color: #8cf0fe;
+  /* background-color: rgba(140, 240, 254, 1); */
 }
 
 .Roadmap-to-Team {
-  background: linear-gradient(
-    rgba(140, 240, 254, 1) 25%,
-    rgba(58, 137, 148, 1) 58%,
+  background:
+  linear-gradient(
+    rgba(140, 240, 254, 1) 2%,
+    rgba(58, 137, 148, 1) 40%,
     rgba(0, 0, 0, 1) 100%
   );
+ 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -27,8 +27,7 @@
 }
 
 .faqs {
-  width: 100%;
-  max-width: 768px;
+  max-width: 100%;
   text-transform: none;
   cursor: pointer;
 }
@@ -92,4 +91,12 @@
 }
 div.faq {
   border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 600px) {
+.faqs {
+  width: 70%;
+}
+
 }

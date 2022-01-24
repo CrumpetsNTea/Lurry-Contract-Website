@@ -25,7 +25,7 @@ function QuestionList() {
       open: false
     },
     {
-      question: "How do can I access the Secret Lurry Society discord?",
+      question: "How can I access the Secret Lurry Society discord?",
       answer: "To access the discord, simply click on the discord social icon (located in the top, right corner) and authenticate yourself using your MetaMask account once prompted.",
       open: false
     },

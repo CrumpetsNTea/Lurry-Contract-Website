@@ -39,7 +39,7 @@ export default function Navigation() {
 
   window.addEventListener("scroll", () => {
     const nav = document.getElementById("navbar");
-    if (window.scrollY > 3200) {
+    if (window.scrollY > 2200) {
       nav.style.display = "flex";
       return;
     }
