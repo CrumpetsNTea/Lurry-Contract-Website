@@ -43,8 +43,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 12rem;
-  height: 3rem;
+  width: 15rem;
+  height: 5rem;
   background: #f4d12d;
   border: none;
   border-radius: 20rem;
@@ -71,6 +71,47 @@
 }
 
 .buy-button:active {
+  background-color: #debc26;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.2rem);
+}
+
+.lurrycoin-button-container {
+  padding-top: 2rem;
+}
+
+.lurrycoin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 15rem;
+  height: 5rem;
+  background: #f4d12d;
+  border: none;
+  border-radius: 20rem;
+
+  /* font-family: Raleway; */
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+
+  color: #000000;
+
+  float: right;
+  box-shadow: 0rem 0.4rem black;
+  cursor: pointer;
+  z-index: 10;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.lurrycoin:hover {
+  background-color: #e8c529;
+}
+
+.lurrycoin:active {
   background-color: #debc26;
   box-shadow: 0 0.1rem #666;
   transform: translateY(0.2rem);

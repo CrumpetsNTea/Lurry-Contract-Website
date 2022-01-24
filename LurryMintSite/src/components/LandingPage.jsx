@@ -15,6 +15,7 @@ export default function LandingPage() {
     const rightCloud = document.getElementById("right-cloud");
     const lurrySea = document.getElementById("lurry-sea");
     const buyButton = document.getElementById("buy-button");
+    const lurrycoin = document.getElementById("lurrycoin");
     const logoContainer = document.getElementById("logo-container");
     const value = window.scrollY;
 
@@ -24,15 +25,18 @@ export default function LandingPage() {
       leftCloud.style.left = value * -1 + "px";
       rightCloud.style.right = value * -1 + "px";
       buyButton.style.display = "flex";
+      lurrycoin.style.display = "flex";
     } else if (value > 800) {
       lurrySea.style.top = (value - 700) * -1 + "px";
       logoContainer.style.top = (value - 1100) * -0.2 + "px";
     }
     if (value > 1100) {
       buyButton.style.display = "none";
+      lurrycoin.style.display = "none";
       return;
     }
     buyButton.style.display = "flex";
+    lurrycoin.style.display = "flex";
   });
 
   return (
@@ -59,6 +63,9 @@ export default function LandingPage() {
               Buy A Lurry
             </Link>
           </button>
+          <div className="lurrycoin-button-container">
+        <a href="http://localhost:8000/"><button id="lurrycoin" className="lurrycoin"><p>Buy $LurryCoin</p></button></a>
+        </div>
         </div>
       </div>
       <div id="lurry-sea">
