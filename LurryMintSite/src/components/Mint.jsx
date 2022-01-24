@@ -150,7 +150,12 @@ const MintPage = () => {
         }
       } catch (error) {
         console.log(error);
-        alert(`Sorry, there was an error, please try again. Error: ${error}`);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: `Something went wrong! Please try again. Error message: ${error.message}`,
+        })
+        console.log(error)
       }
     }
   };
@@ -217,7 +222,7 @@ const MintPage = () => {
         <div className="welcome-box">
           <img
             className="Lurry-and-Info"
-            src="https://gateway.pinata.cloud/ipfs/QmQnoTrDMdqEfK5rESALU7nZKkoMgVaPJt1iaDowJPKByB?preview=1"
+            src="https://gateway.pinata.cloud/ipfs/QmXT5drasjvv4WN2iq2ZnFAeioonXiYisqxqN8o2HNALUp?preview=1"
             alt="LURRY"
           ></img>
           {currentAccount === ""

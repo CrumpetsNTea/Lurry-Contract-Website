@@ -56,7 +56,7 @@ export default function LandingPage() {
           <img
             id="logo"
             className="logo-landing"
-            src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
+            src="https://gateway.pinata.cloud/ipfs/Qmd9ZErnQfKqTShtvubdJbLPcyjz8wDFJbu5nKQA19Wwfe?preview=1"
           ></img>
           <button id="buy-button" className="buy-button">
             <Link to="mint-page" spy={true} smooth={true} offset={800}>

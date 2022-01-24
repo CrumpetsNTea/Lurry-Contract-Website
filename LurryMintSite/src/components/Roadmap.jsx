@@ -22,7 +22,7 @@ export default function Roadmap() {
             </h4>
             <h4 className="description-steps">
               <span className="bold">Step 3: </span>
-              Marketing - implement Discord Token transfers for services and merch
+              Marketing - implement Discord Token transfers for services and merch ⏳
               <br className="phones-only" />
             </h4>
           </div>

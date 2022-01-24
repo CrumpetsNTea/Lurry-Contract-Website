@@ -39,12 +39,13 @@
 }
 
 .buy-button {
+  margin-top: -15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 15rem;
-  height: 5rem;
+  width: 14rem;
+  height: 4rem;
   background: #f4d12d;
   border: none;
   border-radius: 20rem;
@@ -85,8 +86,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 15rem;
-  height: 5rem;
+  width: 14rem;
+  height: 4rem;
   background: #f4d12d;
   border: none;
   border-radius: 20rem;
@@ -119,6 +120,12 @@
 
 .filler {
   background-color: rgb(140, 240, 254);
+  background-image: url('https://gateway.pinata.cloud/ipfs/QmfMNdcT83fZFQqjsquZKP2LNYNDEZyx3PzQZWo1Ye4CZ3?preview=1');
+  background-attachment: local;
+  background-size: 50%;
+  background-repeat:round;
+  position: relative;
+  height: 150rem;
 }
 
 .logo-container {
@@ -131,14 +138,22 @@
 }
 
 .logo-landing {
-  width: clamp(10rem, 13vw, 20rem);
+  width: clamp(40rem, 15vw, 40rem);
+  /* width: 50%; */
+  /* height: 50%; */
+  margin: -4rem;
   z-index: 2;
+  padding-left: 3rem;
 }
 
 #lurry-sea {
   position: relative;
   background-color: rgb(140, 240, 254);
-  height: 40rem;
+  background-image: url('https://gateway.pinata.cloud/ipfs/QmfMNdcT83fZFQqjsquZKP2LNYNDEZyx3PzQZWo1Ye4CZ3?preview=1');
+  background-attachment: local;
+  background-size: 60%;
+  background-repeat:round;
+  height: 45rem;
 }
 
 @keyframes bounce {

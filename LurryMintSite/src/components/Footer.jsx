@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Footer.css';
-import { ReactDOM } from 'react';
 import { SocialIcon } from 'react-social-icons';
 
 
@@ -15,7 +14,7 @@ function Footer () {
 
       <section className="footer-info-left">
         <div className="left-side-footer">
-          <SocialIcon url="https://twitter.com/LurrySecret" className="twitter"/>
+          <SocialIcon url="https://twitter.com/SecretLurry" className="twitter"/>
           <SocialIcon url="https://discord.com/channels/932802763690246214/932802763690246216"/>
           <a href="https://testnets.opensea.io/collection/secret-lurry-society"> <img src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-White.png" className="opensea-logo"/></a>
         </div>

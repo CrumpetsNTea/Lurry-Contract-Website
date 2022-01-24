@@ -59,7 +59,7 @@ const LurryCarousel = () => {
       <div>
         <img
           className="lurry-png"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/WatermelonLurry.png"
+          src="https://gateway.pinata.cloud/ipfs/QmTi58eQ7jjz6tAyaXuuF3rwuESFwEwdFVMJf7o24MYJ9M?preview=1"
           alt=""
         ></img>
       </div>
