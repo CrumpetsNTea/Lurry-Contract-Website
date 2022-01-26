@@ -84,11 +84,11 @@ export default function Navigation() {
                 </Link>
               </li>
             </ul>
-            <a></a>
+            {/* <a></a> */}
           </>
         )}
       </div>
-      {click && (
+      {click === true && (
         <ul className="dropdown">
           <li>
             <Link to="mint-page" spy={true} smooth={true}>
