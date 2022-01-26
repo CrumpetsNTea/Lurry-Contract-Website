@@ -27,7 +27,7 @@
 }
 
 .faqs {
-  max-width: 100%;
+  max-width: 60%;
   text-transform: none;
   cursor: pointer;
 }
@@ -96,7 +96,7 @@ div.faq {
 
 @media screen and (max-width: 600px) {
 .faqs {
-  width: 70%;
+  width: 60%;
 }
 
 }

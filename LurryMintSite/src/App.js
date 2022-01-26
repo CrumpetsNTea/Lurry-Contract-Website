@@ -16,7 +16,6 @@ const App = () => {
       <LandingPage />
 
       <div className="Roadmap-to-Team">
-      {/* <Depth /> */}
       <MintPage />
         <Roadmap />
         <QuestionList />

@@ -41,6 +41,7 @@ export default function Navigation() {
     const nav = document.getElementById("navbar");
     if (window.scrollY > 2200) {
       nav.style.display = "flex";
+      nav.style.background = "#7cdbe9"
       return;
     }
     nav.style.display = "none";

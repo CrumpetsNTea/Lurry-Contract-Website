@@ -70,7 +70,7 @@ const MintPage = () => {
 
   const getLurryId = async () => {
     const { ethereum } = window;
-    const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
+    const CONTRACT_ADDRESS = "0xFf9A460ee03Ebb901dc71E3a0d5E617C8CbFD53C";
     const provider = new ethers.providers.Web3Provider(ethereum);
     const connectedContract = new ethers.Contract(
       CONTRACT_ADDRESS,
@@ -85,7 +85,7 @@ const MintPage = () => {
 
   //  Function that interacts with the contract and calls the minting function inside the contract file
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0x4b05a06d9dc2724d0eD2782D267469667bB1205B";
+    const CONTRACT_ADDRESS = "0xFf9A460ee03Ebb901dc71E3a0d5E617C8CbFD53C";
 
     if (currentMintCount >= 12) {
       alert("All Lurry's have been minted! Sorry!");
