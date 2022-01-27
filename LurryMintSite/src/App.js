@@ -7,16 +7,12 @@ import QuestionList from "./components/QuestionList";
 import TeamList from "./components/TeamList";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
-import Depth from "./components/Depth";
 
 const App = () => {
   return (
     <>
-    <div>
-      <Navigation />
-      </div>
       <LandingPage />
-
+      <Navigation />
       <div className="Roadmap-to-Team">
       <MintPage />
         <Roadmap />

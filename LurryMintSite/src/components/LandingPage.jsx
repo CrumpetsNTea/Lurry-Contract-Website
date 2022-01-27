@@ -61,7 +61,7 @@ export default function LandingPage() {
             alt=""
           ></img>
           <button id="buy-button" className="buy-button">
-            <Link to="mint-page" spy={true} smooth={true} offset={800}>
+            <Link to="mint-page" spy={true} smooth={true} offset={800} duration={3500}>
               Go to Lurry Mint
             </Link>
           </button>

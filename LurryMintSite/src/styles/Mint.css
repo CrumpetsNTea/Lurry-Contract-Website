@@ -201,6 +201,12 @@
 }
 
 @media screen and (max-width: 650px) {
+
+  .Lurry-and-Info {
+    height: 100%;
+    width: 100%;
+  }
+
   .small-buttons {
     display: flex;
   }
@@ -265,5 +271,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* margin-bottom: -rem; */
   }
 }

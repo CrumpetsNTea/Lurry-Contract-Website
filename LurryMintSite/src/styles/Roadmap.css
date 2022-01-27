@@ -231,6 +231,15 @@
 }
 
 @media screen and (max-width: 500px) {
+  .roadmap {
+    height: 45rem;
+  }
+
+  .description-steps {
+    font-size: clamp(0.8rem, 2.5vw, 2rem);
+    padding-top: 0.5rem;
+  }
+
   .lurry-png {
     width: 100%;
   }
