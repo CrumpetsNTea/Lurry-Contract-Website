@@ -5,6 +5,7 @@ import rightCloud from "../images/right-cloud.png";
 import lurrySea from "../images/lurry-sea.png";
 import "../styles/LandingPage.css";
 import { Link } from "react-scroll";
+import secretLogo from "../images/SecretLogo.png";
 
 export default function LandingPage() {
   let body = document.body;
@@ -43,20 +44,21 @@ export default function LandingPage() {
     <section className="filler">
       <div className="landing-page">
         <div className="clouds-and-sun">
-          <img id="left-cloud" className="clouds" src={leftCloud}></img>
+          <img id="left-cloud" className="clouds" src={leftCloud} alt=""></img>
           <img
             id="sun"
             className="lurry-sun"
             src={lurrySun}
             alt="Lurry sun"
           ></img>
-          <img id="right-cloud" className="clouds" src={rightCloud}></img>
+          <img id="right-cloud" className="clouds" src={rightCloud} alt=""></img>
         </div>
         <div id="logo-container" className="logo-container">
           <img
             id="logo"
             className="logo-landing"
-            src="https://gateway.pinata.cloud/ipfs/Qmd9ZErnQfKqTShtvubdJbLPcyjz8wDFJbu5nKQA19Wwfe?preview=1"
+            src={secretLogo}
+            alt=""
           ></img>
           <button id="buy-button" className="buy-button">
             <Link to="mint-page" spy={true} smooth={true} offset={800}>
@@ -69,7 +71,7 @@ export default function LandingPage() {
         </div>
       </div>
       <div id="lurry-sea">
-        <img className="lurry-sea" src={lurrySea}></img>
+        <img className="lurry-sea" src={lurrySea} alt=""></img>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import Swal from "sweetalert2"
 
 import SecretLurrySociety from "../utils/SecretLurrySociety.json";
 import "../styles/Mint.css";
+import crayonLurryandInfo from "../images/CrayonLurry-Final.png"
 
 const MintPage = () => {
   const [currentMintCount, setCurrentMintCount] = useState(0);
@@ -181,12 +182,10 @@ const MintPage = () => {
           </button>
         </div>
       );
-    } else {
+    } else if (currentMintCount >= 12) {
       return (
-        <div className="no-flexbox">
-          <div className="no-container">
-            <p className="no-button">Collection Sold Out</p>
-          </div>
+        <div className="connect-wallet-container">
+        <button className="no-button">Collection Sold Out</button>
         </div>
       );
     }
@@ -205,13 +204,9 @@ const MintPage = () => {
           Mint!
         </button>
       );
-    } else {
+    } else if (currentMintCount >= 12) {
       return (
-        <div className="no-flexbox">
-          <div className="no-container">
-            <p className="no-button">Collection Sold Out</p>
-          </div>
-        </div>
+        <button className="no-buttonsm">Collection Sold Out</button>
       );
     }
   };
@@ -222,7 +217,7 @@ const MintPage = () => {
         <div className="welcome-box">
           <img
             className="Lurry-and-Info"
-            src="https://gateway.pinata.cloud/ipfs/QmXT5drasjvv4WN2iq2ZnFAeioonXiYisqxqN8o2HNALUp?preview=1"
+            src={crayonLurryandInfo}
             alt="LURRY"
           ></img>
           {currentAccount === ""
@@ -230,9 +225,11 @@ const MintPage = () => {
             : renderMintButton()}
         </div>
         <div className="mint-count">
+          <div className="small-buttons">
           {currentAccount === ""
             ? renderNotConnectedContainerSm()
             : renderMintButtonSm()}
+           </div>
           <h1> Total Lurry's Minted: {currentMintCount} / 12</h1>
         </div>
       </div>

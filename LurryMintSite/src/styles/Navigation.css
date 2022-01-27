@@ -120,7 +120,8 @@ button {
     flex-direction: column;
     justify-content: space-around;
     height: 10rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     list-style: none;
+    z-index: 10;
   }
 }

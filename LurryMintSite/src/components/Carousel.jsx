@@ -1,5 +1,19 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import movieLurry from "../images/lurrys/3DMovieLurry.png";
+import biohazardLurry from "../images/lurrys/BiohazardLurry.png";
+import crayonLurry from "../images/lurrys/CrayonLurry.png";
+import sunburnLurry from "../images/lurrys/SunburnLurry.png";
+import gentlemanLurry from "../images/lurrys/GentlemanLurry.png";
+import frozenLurry from "../images/lurrys/FrozenLurry.png"
+import watermelonLurry from "../images/lurrys/WatermelonLurry.png";
+import disguiseLurry from "../images/lurrys/DisguiseLurry.png";
+import sailorLurry from "../images/lurrys/SailorLurry.png";
+import strawburryLurry from "../images/lurrys/StrawburryLurry.png";
+import ogLurry from "../images/lurrys/OGLurry.png";
+import underwaterLurry from "../images/lurrys/UnderwaterLurry.png"
+
+
 
 const LurryCarousel = () => {
   return (
@@ -17,84 +31,84 @@ const LurryCarousel = () => {
       <div>
         <img
           className="lurry-png large-only"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/3DMovieLurry.png"
+          src={movieLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png medium-large-only"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/BiohazardLurry.png"
+          src={biohazardLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png small-excluded"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/CrayonLurry.png"
+          src={crayonLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/SunburnLurry.png"
+          src={sunburnLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png large-only"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/GentlemanLurry.png"
+          src={gentlemanLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png medium-large-only"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/FrozenLurry.png"
+          src={frozenLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png"
-          src="https://gateway.pinata.cloud/ipfs/QmTi58eQ7jjz6tAyaXuuF3rwuESFwEwdFVMJf7o24MYJ9M?preview=1"
+          src={watermelonLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png small-excluded"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/DisguiseLurry.png"
+          src={disguiseLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/SailorLurry.png"
+          src={sailorLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png large-only"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/StrawburryLurry.png"
+          src={strawburryLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png medium-large-only"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/OGLurry.png"
+          src={ogLurry}
           alt=""
         ></img>
       </div>
       <div>
         <img
           className="lurry-png small-excluded"
-          src="https://gateway.pinata.cloud/ipfs/QmbA4maNzx3Bzy52Es6PZS6q7kTah2fVT5B6sJ64MizPXn/UnderwaterLurry.png"
+          src={underwaterLurry}
           alt=""
         ></img>
       </div>

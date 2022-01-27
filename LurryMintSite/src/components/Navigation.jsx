@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Navigation.css";
 import { Link } from "react-scroll";
+import secretLogo from "../images/Logo_grey.png";
 
 export default function Navigation() {
   const [click, setClick] = useState(false);
@@ -51,7 +52,7 @@ export default function Navigation() {
     <>
       <div id="navbar" className="navbar">
         <img
-          src="https://gateway.pinata.cloud/ipfs/QmcNE5sZHYg5ecEYXhz2TxqrDpzUJvAgy7X1ddPLYppGUj?preview=1"
+          src={secretLogo}
           alt="Secret Lurry Society Logo"
           className="logo"
         />
@@ -84,7 +85,7 @@ export default function Navigation() {
                 </Link>
               </li>
             </ul>
-            {/* <a></a> */}
+            <a></a>
           </>
         )}
       </div>

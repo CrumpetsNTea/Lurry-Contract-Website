@@ -12,7 +12,9 @@ import Depth from "./components/Depth";
 const App = () => {
   return (
     <>
+    <div>
       <Navigation />
+      </div>
       <LandingPage />
 
       <div className="Roadmap-to-Team">

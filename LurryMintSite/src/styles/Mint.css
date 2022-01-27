@@ -146,6 +146,29 @@
   bottom: 5rem;
 }
 
+.small-buttons {
+  display: none;
+}
+
+.no-button {
+  width: 22vmin;
+  height: 6vmin;
+  background: grey;
+  border: none;
+  border-radius: 20rem;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.3vmin;
+  text-align: center;
+
+  color: #000000;
+
+  float: right;
+  cursor: default;
+}
+
 @media screen and (max-width: 1200px) {
   .connect-wallet-button {
     display: flex;
@@ -158,19 +181,58 @@
     height: 2.4rem;
     border-radius: 20px;
   }
+  
+  .no-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0.5rem;
+    width: clamp(1rem, 12vw, 8rem);
+    font-size: clamp(0.9rem, 0.9vw, 2rem);
+    height: 2.4rem;
+    border-radius: 20px;
+    
+  }
 }
 
 .connect-button-sm {
   display: none;
 }
 
-@media screen and (max-width: 625px) {
-  .connect-wallet-button {
+@media screen and (max-width: 650px) {
+  .small-buttons {
+    display: flex;
+  }
+
+  .connect-wallet-container {
     display: none;
   }
 
   .welcome-box {
     padding-left: 0;
+  }
+
+  .no-buttonsm {
+    display: block;
+    width: 11rem;
+    height: 4rem;
+    background: grey;
+    border: none;
+    border-radius: 20rem;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+
+    color: #000000;
+
+    float: right;
+    cursor: default;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .connect-button-sm {
