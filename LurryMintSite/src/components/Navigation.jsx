@@ -4,25 +4,15 @@ import { Link } from "react-scroll";
 import secretLogo from "../images/Logo_grey.png";
 
 export default function Navigation() {
-  const [click, setClick] = useState(false);
   const [menuType, setMenuType] = useState(1);
 
-  const hamburgerClick = (click, setClick) => {
-    if (click) {
-      setClick(false);
-      return;
-    }
-    setClick(true);
-  };
 
-  const x = window.matchMedia("(max-width: 700px)");
+  const x = window.matchMedia("(min-width: 650px)");
 
   const navInjection = (x) => {
     if (x.matches) {
-      setMenuType(0);
-    } else {
       setMenuType(1);
-    }
+    } 
   };
 
   useEffect(() => {
@@ -50,13 +40,14 @@ export default function Navigation() {
 
   return (
     <>
+    <div className="navbar-container">
       <div id="navbar" className="navbar">
         <img
           src={secretLogo}
           alt="Secret Lurry Society Logo"
           className="logo"
         />
-        {menuType === 0 && (
+        {/* {menuType === 0 && (
           <ul className="nav-links">
             <button
               className="hamburger-icon"
@@ -65,7 +56,7 @@ export default function Navigation() {
               <i className="fas fa-bars fa-2x"></i>
             </button>
           </ul>
-        )}
+        )} */}
         {menuType === 1 && (
           <>
             <ul className="phones-excluded nav-links">
@@ -89,25 +80,7 @@ export default function Navigation() {
           </>
         )}
       </div>
-      {click === true && (
-        <ul className="dropdown">
-          <li>
-            <Link to="mint-page" spy={true} smooth={true}>
-              Mint
-            </Link>
-          </li>
-          <li>
-            <Link to="Roadmap" spy={true} smooth={true}>
-              Roadmap
-            </Link>
-          </li>
-          <li>
-            <Link to="FAQ" spy={true} smooth={true}>
-              FAQ
-            </Link>
-          </li>
-        </ul>
-      )}
+      </div>
     </>
   );
 }

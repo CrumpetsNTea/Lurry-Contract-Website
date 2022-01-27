@@ -91,17 +91,9 @@ button {
   box-shadow: none;
 }
 
-.hamburger-icon {
-  background-color: transparent;
-  border: none;
-  color: white;
-}
 
-.dropdown {
-  background: #0c303d;
-}
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 700px) {
   .phones-only {
     display: block;
   }
@@ -114,15 +106,16 @@ button {
     display: flex;
     flex-direction: row-reverse;
   }
+}
 
-  .dropdown {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 10rem;
-    /* padding-left: 2rem; */
-    list-style: none;
-    background: #7cdbe9;
-    padding-left: 1rem;
-  }
+@media screen and (max-width: 699px) {
+.navbar {
+  display: none;
+}
+.phones-excluded {
+  display: none;
+}
+.navbar-container {
+  display: none;
+}
 }

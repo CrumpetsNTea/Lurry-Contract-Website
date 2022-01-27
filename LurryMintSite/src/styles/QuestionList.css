@@ -27,14 +27,14 @@
 }
 
 .faqs {
-  max-width: 55%;
+  max-width: 60%;
   text-transform: none;
   cursor: pointer;
 }
 
 .faqs .faq {
   margin: 15px;
-  height: 80x;
+  /* height: 80x; */
   padding: 15px;
   background-color: white;
   box-shadow: 0px 0px 4px black;
@@ -100,3 +100,4 @@ div.faq {
 }
 
 }
+
