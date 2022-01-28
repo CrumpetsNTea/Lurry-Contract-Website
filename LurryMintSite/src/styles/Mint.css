@@ -1,3 +1,8 @@
+@font-face {
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+  font-family: Raleway-regular;
+}
+
 .MintPage {
   display: flex;
   flex-direction: column;
@@ -140,7 +145,6 @@
   display: flex;
   position: relative;
   justify-content: center;
-  font-family: "Callie Chalk Font", sans-serif;
   width: 80%;
   font-size: clamp(0.5rem, 2vw, 2rem);
   bottom: 5rem;

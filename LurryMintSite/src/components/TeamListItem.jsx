@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/TeamListItem.css";
 import iouriteam from "../images/iouriteam.jpg";
 import connor from "../images/connor.jpg";
-import iourihover from "../assets/iourihover.png";
 
 function TeamListItems() {
   return (

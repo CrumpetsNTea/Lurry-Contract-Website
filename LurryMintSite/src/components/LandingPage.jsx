@@ -66,7 +66,7 @@ export default function LandingPage() {
             </Link>
           </button>
           <div className="lurrycoin-button-container">
-        <a href="http://localhost:8000/"><button id="lurrycoin" className="lurrycoin"><p>Buy $LurryCoin</p></button></a>
+        <a href="http://localhost:3000/"><button id="lurrycoin" className="lurrycoin"><p>Buy $LurryCoin</p></button></a>
         </div>
         </div>
       </div>
